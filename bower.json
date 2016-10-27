@@ -1,0 +1,12 @@
+{
+  "name": "n-concept",
+  "homepage": "https://github.com/financial-times/n-concept",
+  "description": "n-concept provides a card for concepts (e.g. topic, author) and their articles",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

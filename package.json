@@ -1,0 +1,23 @@
+{
+  "name": "@financial-times/n-concept",
+  "version": "0.0.0",
+  "description": "n-concept provides a card for concepts (e.g. topic, author) and their articles",
+  "main": "",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Financial-Times/n-concept.git"
+  },
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Financial-Times/n-concept/issues"
+	},
+	"homepage": "https://github.com/Financial-Times/n-concept#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "npm-prepublish": "^1.2.1"
+  }
+}
