@@ -1,0 +1,66 @@
+{{#concept @this}}
+	<section data-trackable="concept" aria-label="{{name}}" data-o-grid-colspan="{{responsiveGrids}}" class="card card--myft o-card{{#unless items.length}} card--empty{{/unless}}{{#if lazyLoadImages}} card--lazy-loading-images{{/if}} {{classes}}">
+		<header class="card__myft-header">
+			{{#if items.length}}
+				<div class="card__myft-image-container{{#if lazyLoadImages}} n-util-hide-core{{/if}}">
+					{{#nImagePresenter srcSet=imageUrl sizes='{"default": 90, "XL": 120 }' classes="card__myft-image" widths='[90, 120]' lazyLoad=lazyLoadImages}}
+						img
+						{{!-- > n-image/templates/image--}}
+					{{/nImagePresenter}}
+				</div>
+			{{/if}}
+			<h3 class="card__myft-title">
+				<a class="card__concept-link" href={{url}} data-trackable="concept-link" aria-label="Go to list of all articles about {{name}}">{{name}}</a>
+			</h3>
+		</header>
+		{{#if items.length}}
+			<dl class="card__myft-content">
+				<dt class="card__concept-sub-heading">Recent articles</dt>
+				<dd class="card__concept-articles-container">
+					<ul class="card__concept-articles">
+						{{#items}}
+							<li class="card__concept-article">
+								<a
+									class="card__concept-article-link"
+									href="{{url}}{{#unless ../isFollowing}}?tagToFollow={{../conceptId}}{{/unless}}{{../referrerTracking}}"
+									data-trackable="article"
+								>
+									<span class="card__classifier-gap">
+										<h3 class="card__concept-article-text">
+											{{title}}
+										</h3>
+									</span>
+									{{#ifAll @root.flags.premiumContentIndicator isPremium}}
+										<span class="card__classifier">Premium</span>
+									{{/ifAll}}
+								</a>
+							</li>
+						{{/items}}
+					</ul>
+				</dd>
+			</dl>
+		{{else}}
+			<div class="card__myft-content">
+				<p class="card__concept-empty">No articles published in the last week</p>
+				<p class="card__concept-empty">To see previous articles visit the <a class="card__concept-empty-link" data-trackable="empty-link" href={{url}}>{{name}}</a> topic page</p>
+			</div>
+		{{/if}}
+		<h4 class="n-util-visually-hidden">Actions and more information</h4>
+		{{#ifAll flags flags.myFtApiWrite}}
+			<div class="card__myft-meta">
+				<div class="o-grid-row o-grid-row--compact">
+					<div data-o-grid-colspan="7 M12 XL7">
+						{{#if @root.flags.myFTInstantAlertsButtons}}
+						{{!-- >n-ui/myft/templates/instant-alert conceptId=conceptId name=name taxonomy=taxonomy extraClasses="card__concept-instant" --}}
+
+						{{/if}}
+					</div>
+					<div data-o-grid-colspan="5 M12 XL5">
+						{{>n-ui/myft/templates/follow conceptId=id name=name taxonomy=taxonomy extraClasses="card__concept-follow" }}
+					</div>
+				</div>
+			</div>
+		{{/ifAll}}
+	</section>
+
+{{/concept}}

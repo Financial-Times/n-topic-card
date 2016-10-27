@@ -8,5 +8,11 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "o-grid": "^4.2.3",
+    "o-tracking": "^1.1.15",
+    "n-ui": "^2.52.3",
+    "n-image": "^4.9.0"
+  }
 }
