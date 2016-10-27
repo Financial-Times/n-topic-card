@@ -4,7 +4,7 @@
   "description": "n-concept provides a card for concepts (e.g. topic, author) and their articles",
   "main": "",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"TODO: currently no test specified\" && exit 0"
 	},
   "repository": {
     "type": "git",
