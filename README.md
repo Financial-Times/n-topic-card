@@ -12,10 +12,15 @@ Add the following line to your main sass file: `@import "n-concept/main";`
 
 ## Usage
 
+Server-side
 ```html
-{{#presenter 'n-concept/presenters/concept' @this}}
-	{{>'n-concept/templates/concept' imageUrl=@concept.imageUrl responsiveGrids=@concept.responsiveGrids}}
-{{/presenter}}
+	{{> n-concept/templates/concept }}
+```
+
+Client-side
+```javascript
+const myftTemplate = require('../../../views/partials/myft.html');
+const myFtHtml = myftTemplate(data);
 ```
 
 n-concept requires at least the following data:
