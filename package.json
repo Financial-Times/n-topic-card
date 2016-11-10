@@ -3,21 +3,25 @@
   "version": "0.0.0",
   "description": "n-concept provides a card for concepts (e.g. topic, author) and their articles",
   "main": "",
-	"scripts": {
-		"test": "echo \"TODO: currently no test specified\" && exit 0"
-	},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Financial-Times/n-concept.git"
   },
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/Financial-Times/n-concept/issues"
-	},
-	"homepage": "https://github.com/Financial-Times/n-concept#readme",
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Financial-Times/n-concept/issues"
+  },
+  "homepage": "https://github.com/Financial-Times/n-concept#readme",
   "devDependencies": {
     "bower": "^1.7.9",
+    "chai": "^3.5.0",
+    "eslint": "^3.8.1",
+    "lintspaces-cli": "^0.4.0",
+    "mocha": "^3.1.2",
     "npm-prepublish": "^1.2.1"
+  },
+  "dependencies": {
+    "@financial-times/n-image": "^4.9.0"
   }
 }
