@@ -1,3 +1,5 @@
+'use strict';
+
 const ConceptImagePresenter = require('./concept-image');
 const ResponsiveGridsPresenter = require('./responsive-grids');
 

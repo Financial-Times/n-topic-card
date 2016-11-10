@@ -1,3 +1,4 @@
+'use strict';
 /**
 * builds a value for data-o-grid-colspan that will show or hide a card depending
 * @param {Object} show using o-grid breakpoints, sets up a grid colspan value to display the section (or not)
