@@ -22,7 +22,6 @@
     "npm-prepublish": "^1.2.1"
   },
   "dependencies": {
-    "@financial-times/n-image": "^4.9.0",
-    "@financial-times/n-ui": "^2.52.3"
+    "@financial-times/n-image": "^4.9.0"
   }
 }
