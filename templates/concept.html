@@ -4,8 +4,7 @@
 			{{#if items.length}}
 				<div class="card__myft-image-container{{#if lazyLoadImages}} n-util-hide-core{{/if}}">
 					{{#nImagePresenter srcSet=imageUrl sizes='{"default": 90, "XL": 120 }' classes="card__myft-image" widths='[90, 120]' lazyLoad=lazyLoadImages}}
-						img
-						{{!-- > n-image/templates/image--}}
+						{{> n-image/templates/image }}
 					{{/nImagePresenter}}
 				</div>
 			{{/if}}
@@ -51,16 +50,14 @@
 				<div class="o-grid-row o-grid-row--compact">
 					<div data-o-grid-colspan="7 M12 XL7">
 						{{#if @root.flags.myFTInstantAlertsButtons}}
-						{{!-- >n-ui/myft/templates/instant-alert conceptId=conceptId name=name taxonomy=taxonomy extraClasses="card__concept-instant" --}}
-
+							{{> n-ui/myft/templates/instant-alert conceptId=conceptId name=name taxonomy=taxonomy extraClasses="card__concept-instant" }}
 						{{/if}}
 					</div>
 					<div data-o-grid-colspan="5 M12 XL5">
-						{{>n-ui/myft/templates/follow conceptId=id name=name taxonomy=taxonomy extraClasses="card__concept-follow" }}
+						{{> n-ui/myft/templates/follow conceptId=id name=name taxonomy=taxonomy extraClasses="card__concept-follow" }}
 					</div>
 				</div>
 			</div>
 		{{/ifAll}}
 	</section>
-
 {{/concept}}
