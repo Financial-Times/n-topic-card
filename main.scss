@@ -56,13 +56,6 @@
 	float: right;
 }
 
-.card__concept-instant {
-	@include oGridRespondTo(M, XL) {
-		float: right;
-		padding-bottom: $spacing-unit/2;
-	}
-}
-
 .card__concept-empty {
 	font-size: 18px;
 	line-height: 1.2;
