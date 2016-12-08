@@ -41,6 +41,6 @@ app.listen(5005)
 		});
 
 		pa11y.on('close', (code) => {
-			process.exit(code)
+			process.exit(code);
 		});
 	});
