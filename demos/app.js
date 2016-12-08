@@ -3,6 +3,9 @@
 const express = require('@financial-times/n-express');
 const path = require('path');
 const fixtures = require('./fixtures.json');
+const chalk = require('chalk');
+const errorHighlight = chalk.bold.red;
+const highlight = chalk.bold.green;
 
 const app = module.exports = express({
 	name: 'public',
@@ -25,3 +28,19 @@ app.get('/', (req, res) => {
 });
 
 app.listen(5005)
+	.then(() => {
+		const spawn = require('child_process').spawn;
+		const pa11y = spawn('pa11y-ci');
+
+		pa11y.stdout.on('data', (data) => {
+			console.log(highlight(`${data}`)); //eslint-disable-line
+		});
+
+		pa11y.stderr.on('data', (error) => {
+			console.log(errorHighlight(`${error}`)); //eslint-disable-line
+		});
+
+		pa11y.on('close', (code) => {
+			process.exit(code)
+		});
+	});
