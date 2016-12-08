@@ -1,0 +1,85 @@
+{
+	"javascriptBundles": null,
+	"flags": {
+		"myFtApiWrite": true,
+		"premiumContentIndicator": true,
+		"myFTInstantAlertsButtons": true
+	},
+	"concepts": [
+		{
+			"name": "Unfollowed concept with articles",
+			"url": "/",
+			"items": [
+				{
+					"title": "Example article 1",
+					"url": "/"
+				},
+				{
+					"title": "Example article 2",
+					"url": "/"
+				},
+				{
+					"title": "Example article 3",
+					"url": "/"
+				},
+				{
+					"title": "Example article 4",
+					"url": "/"
+				}
+			]
+		},
+		{
+			"name": "Followed concept with articles",
+			"url": "/",
+			"isFollowing": true,
+			"items": [
+				{
+					"title": "Example article 1",
+					"url": "/"
+				},
+				{
+					"title": "Example article 2",
+					"url": "/"
+				},
+				{
+					"title": "Example article 3",
+					"url": "/"
+				},
+				{
+					"title": "Example article 4",
+					"url": "/"
+				}
+			]
+		},
+		{
+			"name": "Concept with premium content",
+			"url": "/",
+			"items": [
+				{
+					"title": "Example article 1",
+					"url": "/",
+					"isPremium": true
+				},
+				{
+					"title": "Example article 2",
+					"url": "/",
+					"isPremium": true
+				},
+				{
+					"title": "Example article 3",
+					"url": "/",
+					"isPremium": true
+				},
+				{
+					"title": "Example article 4",
+					"url": "/",
+					"isPremium": true
+				}
+			]
+		},
+		{
+			"name": "Concept with no articles",
+			"url": "/"
+		}
+	]
+}
