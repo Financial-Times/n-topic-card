@@ -28,11 +28,11 @@
 	font: 16px/1.3 Georgia, serif;
 
 	&:before {
-		@include oIconsGetIcon('arrow-right', oColorsGetColorFor('myft'), 10);
+		@include oIconsGetIcon('arrow-right', oColorsGetColorFor('myft'), 20);
 		content: '';
-		left: 0;
 		position: absolute;
-		top: 4px;
+		top: 0;
+		left: -5px;
 	}
 }
 
