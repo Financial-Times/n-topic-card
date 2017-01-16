@@ -23,9 +23,13 @@ class ConceptImagePresenter {
 			return taxonomyImages.default;
 		}
 		const findItemImage = this.data.items.find( item => {
-			return item.primaryImage && item.primaryImage.rawSrc && !item.isPodcast;
+			return ((item.primaryImage && item.primaryImage.rawSrc)
+				|| (item.mainImage && item.mainImage.url))
+				&& !item.isPodcast;
 		});
-		const conceptImage = findItemImage && findItemImage.primaryImage.rawSrc;
+		const conceptImage = findItemImage
+			&& ((findItemImage.primaryImage && findItemImage.primaryImage.rawSrc)
+			|| findItemImage.mainImage.url);
 
 		return conceptImage || taxonomyImages[this.data.taxonomy] || taxonomyImages.default;
 	}
