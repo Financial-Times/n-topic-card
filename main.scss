@@ -1,4 +1,5 @@
-/* for now, we must also have n-card in our apps for the css */
+@import 'n-card/main';
+
 .card__concept-link {
 	@include oColorsFor(topic, text);
 	border-bottom: 0;
