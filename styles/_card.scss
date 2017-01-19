@@ -1,0 +1,264 @@
+@import './colours';
+@import './mixins';
+
+$rule-size: 1px;
+
+.card {
+	@include oCard;
+	position: relative;
+	background-color: transparent;
+	width: auto;
+	margin-top: oGridGutter();
+	padding-bottom: oGridGutter();
+	flex: 1 1 auto;
+	-ms-flex-preferred-size: auto;
+	overflow: visible;
+
+	@include oGridRespondTo(M) {
+		margin-top: oGridGutter(M);
+	}
+
+	&[data-show~="false"] {
+		display: none;
+	}
+
+	&[data-o-grid-colspan^="0"] {
+		@include oGridRespondTo($until: S) {
+			display: none;
+		}
+	}
+
+	&[data-o-grid-colspan~="S0"] {
+		@include oGridRespondTo(S, $until: M) {
+			display: none;
+		}
+	}
+
+	&[data-o-grid-colspan~="M0"] {
+		@include oGridRespondTo(M, $until: L) {
+			display: none;
+		}
+	}
+
+	&[data-o-grid-colspan~="L0"] {
+		@include oGridRespondTo(L, $until: XL) {
+			display: none;
+		}
+	}
+
+	&[data-o-grid-colspan~="XL0"] {
+		@include oGridRespondTo(XL) {
+			display: none;
+		}
+	}
+
+	// top rule (horizontal line)
+	&:before {
+		content: '';
+		position: absolute;
+		height: $rule-size;
+		left: 0;
+		right: 0;
+		top: -$rule-size;
+		background-color: oColorsGetColorFor(card, border);
+	}
+
+	// left rule (vertical line)
+	&:after {
+		content: '';
+		position: absolute;
+		width: $rule-size;
+		top: 0px;
+		bottom: oGridGutter() / -2;
+		left: oGridGutter() / -2;
+		background-color: oColorsGetColorFor(card, border);
+
+		@include oGridRespondTo(M) {
+			top: 0px;
+			bottom: oGridGutter(M) / -2;
+			left: oGridGutter(M) / -2;
+		}
+	}
+
+	&[data-image~="left"],
+	&[data-image~="right"] {
+		@include oCardThemeLandscape;
+
+		// IE9 hack to prevent articles not clearing floated content
+		.card__content--clear-floats {
+			clear: both;
+		}
+	}
+
+	@each $layout-name in $_o-grid-layout-names {
+		@include oGridRespondTo($layout-name) {
+			&[data-show~="#{$layout-name}--true"] {
+				@include displayFlex;
+			}
+
+			&[data-show~="#{$layout-name}--false"] {
+				display: none;
+			}
+
+			&[data-image~="#{$layout-name}--left"],
+			&[data-image~="#{$layout-name}--right"] {
+				@include oCardThemeLandscape;
+
+				// IE9 hack to prevent articles not clearing floated content
+				.card__content--clear-floats {
+					clear: both;
+				}
+			}
+
+			&[data-image~="#{$layout-name}--top"],
+			&[data-image~="#{$layout-name}--bottom"] {
+				@include oCardThemePortrait;
+			}
+		}
+	}
+}
+
+.card--article {
+	min-height: 1px; // IE fix
+}
+
+.card--main,
+.card--picture-story {
+	@include oCardThemeStandout;
+}
+
+.card.card--paid-post,
+.card.card--promoted-content,
+.card.card--smartmatch {
+	.card__content {
+		// HACK: This is to line up the paid post's title with the story next to it
+		background-color: getColor('white');
+		padding: 10px;
+		margin: 16px -10px -10px;
+	}
+}
+
+.card--external-content .card__content:after {
+	@include oIconsGetIcon('outside-page', null, 20, $iconset-version: 1);
+	content: '';
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+}
+
+.card--editors-pick {
+	@include oColorsFor(card-editors-pick, background);
+	position: relative;
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: auto;
+		right: 0;
+		width: 50px;
+		height: 55px;
+		z-index: 1;
+		background: url('https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fbackgrounds%2Ffold-with-bg-1.svg?source=next') no-repeat;
+		background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fbackgrounds%2Ffold-with-bg-1.svg?source=next&format=png&width=50')\9;
+	}
+}
+
+.card__content {
+	@include oCardContent;
+
+	.card--editors-pick & {
+		padding-right: 40px;
+	}
+
+	.card[data-image~="left"] & {
+		margin-left: 40%;
+		padding-left: 10px;
+		width: 60%;
+
+		&.card__content--has-portrait-image {
+			.core & {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.card[data-image~="hide"] & {
+		width: 100%;
+	}
+
+	@each $layout-name in $_o-grid-layout-names {
+		@include oGridRespondTo($layout-name) {
+			.card[data-image~="#{$layout-name}--left"] & {
+				margin-left: 40%;
+				padding-left: 10px;
+				width: 60%;
+
+				&.card__content--has-portrait-image {
+					.core & {
+						margin-left: 0;
+					}
+				}
+			}
+
+			.card[data-image~="#{$layout-name}--right"] &,
+			.card[data-image~="#{$layout-name}--top"] &,
+			.card[data-image~="#{$layout-name}--bottom"] &,
+			.card[data-image~="#{$layout-name}--hide"] & {
+				width: 100%;
+				margin-left: 0;
+				padding-left: 0;
+			}
+		}
+	}
+
+	.enhanced &.card__content--image-overlay {
+		@include oGridRespondTo(M) {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			width: auto;
+			padding: 30px;
+			background-color: rgba(0, 0, 0, 0.25);
+			background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+			pointer-events: none;
+		}
+	}
+
+	.core .card--lazy-loading-images & {
+		width: 100%;
+		margin-left: 0;
+		padding-left: 0;
+	}
+}
+
+.card[data-image~="embedded"] {
+	.card__sub-content {
+		position: relative;
+	}
+
+	.card__image-link {
+		float: left;
+		width: 30%;
+		margin-top: 0;
+	}
+
+	.card__right-content {
+		margin-left: calc(30% + 10px);
+		margin-top: 10px;
+	}
+
+	.core &.card--lazy-loading-images .card__right-content {
+		margin-left: 0;
+	}
+}
+
+.card__content--grow {
+	flex-grow: 1;
+}
+
+.card .n-myft-ui--save {
+	display: inline-block;
+	float: right;
+	margin-bottom: 1em;
+}
