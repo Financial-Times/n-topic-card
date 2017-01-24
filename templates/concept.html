@@ -8,9 +8,9 @@
 					{{/nImagePresenter}}
 				</div>
 			{{/if}}
-			<h3 class="card__myft-title">
+			<p class="card__myft-title">
 				<a class="card__concept-link" href="{{url}}" data-trackable="concept-link" aria-label="Go to list of all articles about {{name}}">{{name}}</a>
-			</h3>
+			</p>
 		</header>
 		{{#if items.length}}
 			<dl class="card__myft-content">
@@ -25,9 +25,9 @@
 									data-trackable="article"
 								>
 									<span class="card__classifier-gap">
-										<h3 class="card__concept-article-text">
+										<span class="card__concept-article-text">
 											{{title}}
-										</h3>
+										</span>
 									</span>
 									{{#ifAll @root.flags.premiumContentIndicator isPremium}}
 										<span class="card__classifier">Premium</span>
