@@ -27,20 +27,25 @@ app.get('/', (req, res) => {
 	}, fixtures));
 });
 
-app.listen(5005)
-	.then(() => {
-		const spawn = require('child_process').spawn;
-		const pa11y = spawn('pa11y-ci');
+function runPa11yTests () {
+	const spawn = require('child_process').spawn;
+	const pa11y = spawn('pa11y-ci');
 
-		pa11y.stdout.on('data', (data) => {
-			console.log(highlight(`${data}`)); //eslint-disable-line
-		});
-
-		pa11y.stderr.on('data', (error) => {
-			console.log(errorHighlight(`${error}`)); //eslint-disable-line
-		});
-
-		pa11y.on('close', (code) => {
-			process.exit(code);
-		});
+	pa11y.stdout.on('data', (data) => {
+		console.log(highlight(`${data}`)); //eslint-disable-line
 	});
+
+	pa11y.stderr.on('data', (error) => {
+		console.log(errorHighlight(`${error}`)); //eslint-disable-line
+	});
+
+	pa11y.on('close', (code) => {
+		process.exit(code);
+	});
+}
+
+const listen = app.listen(5005);
+
+if (process.env.PA11Y === 'true') {
+	listen.then(runPa11yTests);
+}
