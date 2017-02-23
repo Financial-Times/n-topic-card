@@ -4,7 +4,7 @@ unit-test:
 	mocha --recursive --reporter spec tests
 
 demo-build:
-	@node-sass demos/src/demo.scss --include-path bower_components --output public/
+	@node-sass demos/src/main.scss --include-path bower_components --output public/
 	@$(DONE)
 
 demo: demo-build
