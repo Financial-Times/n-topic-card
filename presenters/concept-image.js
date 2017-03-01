@@ -24,12 +24,12 @@ class ConceptImagePresenter {
 		}
 		const findItemImage = this.data.items.find( item => {
 			return ((item.primaryImage && item.primaryImage.rawSrc)
-				|| (item.mainImage && item.mainImage.url))
+				|| (item.mainImage && (item.mainImage.url || item.mainImage.rawSrc)))
 				&& !item.isPodcast;
 		});
 		const conceptImage = findItemImage
 			&& ((findItemImage.primaryImage && findItemImage.primaryImage.rawSrc)
-			|| findItemImage.mainImage.url);
+			|| findItemImage.mainImage.url || findItemImage.mainImage.rawSrc);
 
 		return conceptImage || taxonomyImages[this.data.taxonomy] || taxonomyImages.default;
 	}

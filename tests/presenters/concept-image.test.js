@@ -43,4 +43,13 @@ describe('Concept Image Presenter', () => {
 		const inst = new ConceptImagePresenter({taxonomy: 'brand', items: invalidItems});
 		expect(inst.imageUrl).to.equal('http://com.ft.imagepublish.prod.s3.amazonaws.com/cca52406-bda0-11e5-9fdb-87b8d15baec2');
 	});
+
+	it('supports mainImage', () => {
+		const mainImagerawSrc = [ { mainImage: { rawSrc: 'foo.jpg' } } ];
+		const mainImageurl = [ { mainImage: { url: 'bar.jpg' } } ];
+		const inst = new ConceptImagePresenter({taxonomy: 'brand', items: mainImagerawSrc});
+		const inst2 = new ConceptImagePresenter({taxonomy: 'brand', items: mainImageurl});
+		expect(inst.imageUrl).to.equal('foo.jpg');
+		expect(inst2.imageUrl).to.equal('bar.jpg');
+	});
 });
