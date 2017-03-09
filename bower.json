@@ -9,6 +9,10 @@
     "test",
     "tests"
   ],
+  "N_UI_COMMENT": "accept at any version as only used in demos",
+  "devDependencies": {
+    "n-ui": "*"
+  },
   "dependencies": {
     "o-card": "^2.0.0",
     "o-grid": "^4.2.3",
