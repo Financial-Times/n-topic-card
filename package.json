@@ -19,10 +19,10 @@
     "eslint": "^3.8.1",
     "lintspaces-cli": "^0.4.0",
     "mocha": "^3.1.2",
+    "npm-prepublish": "^1.2.2",
     "pa11y-ci": "^0.4.0"
   },
   "dependencies": {
-    "@financial-times/n-image": "^4.9.0",
-    "npm-prepublish": "^1.2.2"
+    "@financial-times/n-image": "^4.9.0"
   }
 }
