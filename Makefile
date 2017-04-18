@@ -1,5 +1,7 @@
 include n.Makefile
 
+IGNORE_A11Y = true
+
 unit-test:
 	mocha --recursive --reporter spec tests
 
