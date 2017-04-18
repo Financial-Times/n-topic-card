@@ -9,15 +9,11 @@
     "test",
     "tests"
   ],
-  "N_UI_COMMENT": "accept at any version as only used in demos",
-  "devDependencies": {
-    "n-ui": "*"
-  },
   "dependencies": {
     "o-card": "^2.0.0",
     "o-grid": "^4.2.3",
     "o-tracking": "^1.1.15",
-    "n-myft-ui": "^1.0.0",
+    "n-myft-ui": "^3.0.0",
     "n-image": "^4.9.0",
     "n-ui-foundations": "^1.0.0"
   }
