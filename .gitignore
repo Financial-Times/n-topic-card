@@ -3,4 +3,5 @@ bower_components/
 public/
 .scss-lint.yml
 .editorconfig
+.pa11yci.js
 .eslintrc.js
