@@ -47,12 +47,12 @@
 		{{#ifAll flags flags.myFtApiWrite}}
 			<div class="card__myft-meta">
 				<div class="o-grid-row o-grid-row--compact">
-					<div data-o-grid-colspan="7">
+					<div data-o-grid-colspan="6">
 						{{#if @root.flags.myFTInstantAlertsButtons}}
 							{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name taxonomy=taxonomy extraClasses="card__concept-instant" }}
 						{{/if}}
 					</div>
-					<div data-o-grid-colspan="5">
+					<div data-o-grid-colspan="6">
 						{{> n-myft-ui/myft/templates/follow conceptId=id name=name taxonomy=taxonomy extraClasses="card__concept-follow" }}
 					</div>
 				</div>
