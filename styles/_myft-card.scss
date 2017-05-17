@@ -5,7 +5,7 @@
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	position: relative;
-	width: auto; // TODO: broken a little on IE10 following page
+	width: auto;
 	padding: 10px;
 	margin-top: oGridGutter();
 	padding-bottom: oGridGutter();
