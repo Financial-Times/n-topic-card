@@ -1,13 +1,20 @@
-@import './colours';
-@import './mixins';
-
-.card--myft {
+.card__myft {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	position: relative;
+	width: auto;
+	padding: 10px;
+	margin-top: oGridGutter();
+	padding-bottom: oGridGutter();
+	overflow: visible;
 	background: mix(getColorFor('myft'), getColorFor('page', background), 4%);
 	border-bottom: 1px solid getColorFor('myft');
 
-	&:before,
-	&:after {
-		display: none;
+	@include oGridRespondTo(M) {
+		margin-top: oGridGutter(M);
 	}
 }
 
@@ -15,6 +22,12 @@
 	min-height: 51px;
 	overflow: hidden;
 	padding: 0 0 10px 90px;
+
+	@include oGridRespondTo($from: XL) {
+		padding-left: 120px;
+		min-height: 67px;
+	}
+
 
 	.card--empty &,
 	.core .card--lazy-loading-images & {
@@ -32,6 +45,14 @@
 	overflow-y: hidden;
 	padding-bottom: 10px;
 	text-align: center;
+
+	@include oGridRespondTo($from: XL) {
+		width: 120px;
+		height: 67px;
+		padding-bottom: 10px;
+		text-align: center;
+	}
+
 
 	&.n-image {
 		max-height: 100%;
@@ -63,18 +84,4 @@
 	margin-top: 10px;
 	overflow: visible;
 	padding-top: 10px;
-}
-
-
-@include oGridRespondTo($from: XL) {
-	.card__myft-header {
-		padding-left: 120px;
-		min-height: 67px;
-	}
-	.card__myft-image-container {
-		width: 120px;
-		height: 67px;
-		padding-bottom: 10px;
-		text-align: center;
-	}
 }

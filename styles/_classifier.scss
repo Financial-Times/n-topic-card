@@ -12,10 +12,6 @@
 	color: #ffffff;
 	display: inline;
 
-	.card--article[data-size='large'] & {
-		vertical-align: 12%;
-	}
-
 	.card__classifier-gap ~ & { // overrides oTypographySansBold's setting
 		line-height: 15px;
 		font-size: 15px;

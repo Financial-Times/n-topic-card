@@ -1,5 +1,5 @@
 {{#concept @this}}
-	<section data-trackable="concept" aria-label="{{name}}" data-o-grid-colspan="{{responsiveGrids}}" class="card card--myft o-card{{#unless items.length}} card--empty{{/unless}}{{#if lazyLoadImages}} card--lazy-loading-images{{/if}} {{classes}}">
+<section data-trackable="concept" aria-label="{{name}}" {{#if responsiveGrids}}data-o-grid-colspan="{{responsiveGrids}}"{{/if}} class="card__myft {{#unless items.length}}card--empty{{/unless}}{{#if lazyLoadImages}} card--lazy-loading-images{{/if}} {{classes}}">
 		<header class="card__myft-header">
 			{{#if items.length}}
 				<div class="card__myft-image-container{{#if lazyLoadImages}} n-util-hide-core{{/if}}">
