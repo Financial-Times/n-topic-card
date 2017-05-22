@@ -14,13 +14,14 @@
   },
   "homepage": "https://github.com/Financial-Times/n-concept#readme",
   "devDependencies": {
-    "@financial-times/secret-squirrel": "^2.0.1",
+    "@financial-times/n-internal-tool": "^1.2.3",
     "@financial-times/secret-squirrel": "^2.0.2",
     "bower": "^1.7.9",
     "chai": "^3.5.0",
     "eslint": "^3.8.1",
     "lintspaces-cli": "^0.4.0",
     "mocha": "^3.1.2",
+    "node-sass": "^4.5.3",
     "npm-prepublish": "^1.2.2",
     "pa11y-ci": "^0.4.0",
     "pre-git": "^3.14.0"
@@ -30,7 +31,9 @@
   },
   "config": {
     "pre-git": {
-      "pre-commit": ["node_modules/.bin/secret-squirrel"],
+      "pre-commit": [
+        "node_modules/.bin/secret-squirrel"
+      ],
       "pre-push": [],
       "post-commit": [],
       "post-checkout": [],
