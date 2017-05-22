@@ -3,26 +3,26 @@ const chai = require('chai');
 const expect = chai.expect;
 const invalidItems = [
 	{
-		primaryImage: {
-			rawSrc: null
+		mainImage: {
+			url: null
 		}
 	},
 	{
-		primaryImage: {
-			rawSrc: 'foobar.jpg'
+		mainImage: {
+			url: 'foobar.jpg'
 		},
 		isPodcast: true
 	}
 ];
 const validItems = [
 	{
-		primaryImage: {
-			rawSrc: 'valid1.jpg'
+		mainImage: {
+			url: 'valid1.jpg'
 		}
 	},
 	{
-		primaryImage: {
-			rawSrc: 'valid2.jpg'
+		mainImage: {
+			url: 'valid2.jpg'
 		}
 	}
 ];
@@ -42,14 +42,5 @@ describe('Concept Image Presenter', () => {
 	it('uses the taxonomy image if there is no valid image for the items', () => {
 		const inst = new ConceptImagePresenter({taxonomy: 'brand', items: invalidItems});
 		expect(inst.imageUrl).to.equal('http://com.ft.imagepublish.prod.s3.amazonaws.com/cca52406-bda0-11e5-9fdb-87b8d15baec2');
-	});
-
-	it('supports mainImage', () => {
-		const mainImagerawSrc = [ { mainImage: { rawSrc: 'foo.jpg' } } ];
-		const mainImageurl = [ { mainImage: { url: 'bar.jpg' } } ];
-		const inst = new ConceptImagePresenter({taxonomy: 'brand', items: mainImagerawSrc});
-		const inst2 = new ConceptImagePresenter({taxonomy: 'brand', items: mainImageurl});
-		expect(inst.imageUrl).to.equal('foo.jpg');
-		expect(inst2.imageUrl).to.equal('bar.jpg');
 	});
 });
