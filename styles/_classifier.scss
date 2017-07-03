@@ -4,12 +4,12 @@
 }
 
 .card__classifier {
-	@include oTypographySansBold('s', $load-progressively: true);
+	@include oTypographySansBold($scale: -1, $progressive: true);
 
 	vertical-align: 5%;
 	padding: 0.1em 0.4em 0.14em;
-	background-color: getColor(cold-2);
-	color: #ffffff;
+	background-color: getColor('black-80');
+	color: getColor('white');
 	display: inline;
 
 	.card__classifier-gap ~ & { // overrides oTypographySansBold's setting
