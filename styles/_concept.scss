@@ -5,8 +5,7 @@
 }
 
 .card__concept-sub-heading {
-	font-size: 18px;
-	line-height: 1;
+	@include oTypographySans(1);
 	margin: 10px 0 0;
 }
 
@@ -24,7 +23,7 @@
 	margin: 8px 0 0;
 	padding-left: 15px;
 	position: relative;
-	font: 16px/1.3 Georgia, serif;
+	@include oTypographySerif(0);
 
 	&:before {
 		@include oIconsGetIcon('arrow-right', oColorsGetColorFor('myft'), 20);
@@ -56,8 +55,7 @@
 }
 
 .card__concept-empty {
-	font-size: 18px;
-	line-height: 1.2;
+	@include oTypographySerif(1);
 	margin: 10px 0 20px;
 	text-align: center;
 }
