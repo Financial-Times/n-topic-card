@@ -4,7 +4,7 @@ const expect = chai.expect;
 
 describe('Concept Presenter', () => {
 	it('has a imageURL getter that returns a string', () => {
-		const inst = new ConceptPresenter({taxonomy: 'foo'});
+		const inst = new ConceptPresenter({});
 		expect(typeof inst.imageUrl).to.equal('string');
 	});
 

@@ -26,7 +26,6 @@ const myFtHtml = myftTemplate(data);
 n-concept requires at least the following data:
  * `url` - url for the concept stream page
  * `name` - name of the concept e.g. World
- * `taxonomy` - what type of concept (e.g. author, topic)
  * `conceptId`
  * `items` an array of objects that are the headlines to show
  * `imageUrl` for the image that appears at the top. You don't have to use the presenter to do this, but you will probably want to
@@ -41,7 +40,7 @@ n-concept comes with 3 decorators
 
 `responsive-grids` handles scenarios where you want particular cards to be hidden at certain breakpoints. For example, on the home page only 3 myFT concept cards are shown between the medium and large breakpoints.  This decorator requires the data item `show` with the settings in an object e.g. `{ default: true, M: false, XL: true }`
 
-`concept-image` retrieves the image for the concept card. It requires the name of the taxonomy for the concept, and the list of articles in an array of objects called `items`, which should be in your data anyway.
+`concept-image` retrieves the image for the concept card. It requires the list of articles in an array of objects called `items`, which should be in your data anyway.
 
 The decorator finds an image from the list of articles to be displayed, and if it cannot find one uses a default.
 
