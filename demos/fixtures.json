@@ -2,8 +2,7 @@
 	"javascriptBundles": null,
 	"flags": {
 		"myFtApiWrite": true,
-		"premiumContentIndicator": true,
-		"myFTInstantAlertsButtons": true
+		"premiumContentIndicator": true
 	},
 	"concepts": [
 		{
