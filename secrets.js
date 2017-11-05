@@ -5,4 +5,4 @@ module.exports = {
 		'022eb09a-fea7-11e6-8d8e-a5e3738f9ae4',
 		'flags=@root.flags'
 	]
-}
+};

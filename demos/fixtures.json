@@ -1,88 +1,84 @@
 {
-	"javascriptBundles": null,
-	"flags": {
-		"myFtApiWrite": true,
-		"premiumContentIndicator": true
-	},
-	"concepts": [
-		{
-			"name": "Unfollowed concept with articles",
-			"url": "/",
-			"items": [
-				{
-					"title": "Example article 1",
-					"url": "/"
-				},
-				{
-					"title": "Example article 2",
-					"url": "/"
-				},
-				{
-					"title": "Example article 3",
-					"url": "/"
-				},
-				{
-					"title": "Example article 4",
-					"url": "/"
-				}
-			]
-		},
-		{
-			"name": "Followed concept with articles",
-			"url": "/",
-			"isFollowing": true,
-			"items": [
-				{
-					"title": "Example article 1",
-					"url": "/"
-				},
-				{
-					"title": "Example article 2",
-					"url": "/"
-				},
-				{
-					"title": "Example article 3",
-					"url": "/"
-				},
-				{
-					"title": "Example article 4",
-					"url": "/"
-				}
-			]
-		},
-		{
-			"name": "Concept with premium content",
-			"url": "/",
-			"items": [
-				{
-					"title": "Example article 1",
-					"url": "/",
-					"isPremium": true
-				},
-				{
-					"title": "Example article 2",
-					"url": "/",
-					"isPremium": true
-				},
-				{
-					"id": "220fd1a6-fe9c-11e6-96f8-3700c5664d30",
-					"url": "https://www.ft.com/content/220fd1a6-fe9c-11e6-96f8-3700c5664d30",
-					"title": "Liam Fox warns EU against trade barriers",
-					"isPremium": true,
-					"mainImage": {
-						"rawSrc": "http://prod-upp-image-read.ft.com/022eb09a-fea7-11e6-8d8e-a5e3738f9ae4"
-					}
-				},
-				{
-					"title": "Example article 4",
-					"url": "/",
-					"isPremium": true
-				}
-			]
-		},
-		{
-			"name": "Concept with no articles",
-			"url": "/"
-		}
-	]
+  "javascriptBundles": null,
+  "flags": {
+    "myFtApiWrite": true,
+    "premiumContentIndicator": true
+  },
+  "concepts": [{
+      "name": "Unfollowed concept with articles",
+      "url": "/",
+      "items": [{
+          "title": "Example article 1",
+          "url": "/"
+        },
+        {
+          "title": "Example article 2",
+          "url": "/"
+        },
+        {
+          "title": "Example article 3",
+          "url": "/"
+        },
+        {
+          "title": "Example article 4",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "name": "Followed concept with articles",
+      "url": "/",
+      "isFollowing": true,
+      "items": [{
+          "title": "Example article 1",
+          "url": "/"
+        },
+        {
+          "title": "Example article 2",
+          "url": "/"
+        },
+        {
+          "title": "Example article 3",
+          "url": "/"
+        },
+        {
+          "title": "Example article 4",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "name": "Concept with premium content",
+      "url": "/",
+      "items": [{
+          "title": "Example article 1",
+          "url": "/",
+          "isPremium": true
+        },
+        {
+          "title": "Example article 2",
+          "url": "/",
+          "isPremium": true
+        },
+        {
+          "id": "220fd1a6-fe9c-11e6-96f8-3700c5664d30",
+          "url": "https://www.ft.com/content/220fd1a6-fe9c-11e6-96f8-3700c5664d30",
+          "title": "Liam Fox warns EU against trade barriers",
+          "isPremium": true,
+          "mainImage": {
+            "rawSrc": "http://prod-upp-image-read.ft.com/022eb09a-fea7-11e6-8d8e-a5e3738f9ae4"
+          }
+        },
+        {
+          "title": "Example article 4",
+          "url": "/",
+          "isPremium": true
+        }
+      ]
+    },
+    {
+      "name": "Concept with no articles",
+      "url": "/"
+    }
+  ]
 }

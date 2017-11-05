@@ -24,11 +24,11 @@ const myFtHtml = myftTemplate(data);
 ```
 
 n-concept requires at least the following data:
- * `url` - url for the concept stream page
- * `name` - name of the concept e.g. World
- * `conceptId`
- * `items` an array of objects that are the headlines to show
- * `imageUrl` for the image that appears at the top. You don't have to use the presenter to do this, but you will probably want to
+* `url` - url for the concept stream page
+* `name` - name of the concept e.g. World
+* `conceptId`
+* `items` an array of objects that are the headlines to show
+* `imageUrl` for the image that appears at the top. You don't have to use the presenter to do this, but you will probably want to
 
 Please view the source for more information.
 
