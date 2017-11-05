@@ -2,7 +2,7 @@
 <section data-trackable="concept" aria-label="{{name}}" {{#if responsiveGrids}}data-o-grid-colspan="{{responsiveGrids}}"{{/if}} class="card__myft {{#unless items.length}}card--empty{{/unless}}{{#if lazyLoadImages}} card--lazy-loading-images{{/if}} {{classes}}">
 		<header class="card__myft-header">
 			{{#if items.length}}
-				<div class="card__myft-image-container{{#if lazyLoadImages}} n-util-hide-core{{/if}}">
+				<div class="card__myft-image-container{{#if lazyLoadImages}} n-ui-hide-core{{/if}}">
 					{{#nImagePresenter srcSet=imageUrl sizes='{"default": 90, "XL": 120 }' classes="card__myft-image" widths='[90, 120]' lazyLoad=lazyLoadImages}}
 						{{> n-image/templates/image }}
 					{{/nImagePresenter}}

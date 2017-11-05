@@ -7,7 +7,7 @@ module.exports = (context, options) => {
 		const extraData = {
 			imageUrl: conceptPresenter.imageUrl,
 			responsiveGrids: conceptPresenter.responsiveGrids
-		}
+		};
 		const concept = Object.assign(data, extraData);
 		return options.fn(concept);
 	}

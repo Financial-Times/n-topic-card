@@ -15,7 +15,7 @@ const config = {
 		rules: ['Principle1.Guideline1_3.1_3_1_AAA']
 	},
 	urls: []
-}
+};
 
 for (let viewport of viewports) {
 	for (let url of urls) {
