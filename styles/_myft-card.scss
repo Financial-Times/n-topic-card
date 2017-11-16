@@ -7,12 +7,10 @@
 	position: relative;
 	width: 100%;
 	box-sizing: border-box;
-	padding: 10px;
 	margin-top: oGridGutter();
 	padding-bottom: oGridGutter();
 	overflow: visible;
-	background: mix(getColorFor('myft'), getColorFor('page', background), 4%);
-	border-bottom: 1px solid getColorFor('myft');
+	background: getColor('white');
 
 	@include oGridRespondTo(M) {
 		margin-top: oGridGutter(M);
@@ -20,69 +18,32 @@
 }
 
 .card__myft-header {
-	min-height: 51px;
-	overflow: hidden;
-	padding: 0 0 10px 90px;
-
-	@include oGridRespondTo($from: XL) {
-		padding-left: 120px;
-		min-height: 67px;
-	}
-
-
-	.card--empty &,
-	.core .card--lazy-loading-images & {
-		padding-left: 0;
-		min-height: 0;
-	}
-}
-
-.card__myft-image-container {
-	left: 10px;
-	position: absolute;
-	top: 10px;
-	width: 90px;
-	height: 51px;
-	overflow-y: hidden;
-	padding-bottom: 10px;
-	text-align: center;
-
-	@include oGridRespondTo($from: XL) {
-		width: 120px;
-		height: 67px;
-		padding-bottom: 10px;
-		text-align: center;
-	}
-
-
-	&.n-image {
-		max-height: 100%;
-	}
-}
-
-.card__myft-image {
-	display: block;
+	display: flex;
+	background: getColor('claret');
+	padding: 0 10px 0 0;
 }
 
 .card__myft-title {
 	@include oTypographySansBold($scale: 2, $progressive: true);
-	margin: 0 0 0 10px;
+	color: getColor('white');
+	flex: 1 1 auto;
+	padding-right: 10px;
+}
 
-	.card--empty &,
-	.core .card--lazy-loading-images & {
-		margin-left: 0;
-	}
+.card__myft-meta {
+	@include oTypographyMargin($top: 4);
+	flex: 1 0 auto;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+
+.card__myft-btn--following {
+	margin-right: 10px;
 }
 
 .card__myft-content {
 	border-top: 1px solid rgba(getColorFor('myft'), 0.3);
 	flex-grow: 1;
 	margin: 0;
-}
-
-.card__myft-meta {
-	border-top: 1px solid rgba(getColorFor('myft'), 0.3);
-	margin-top: 10px;
-	overflow: visible;
-	padding-top: 10px;
 }

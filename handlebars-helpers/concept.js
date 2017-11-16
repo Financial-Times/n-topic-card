@@ -5,7 +5,6 @@ module.exports = (context, options) => {
 		const data = Object.assign({}, context, options.hash);
 		const conceptPresenter = new Concept(data);
 		const extraData = {
-			imageUrl: conceptPresenter.imageUrl,
 			responsiveGrids: conceptPresenter.responsiveGrids
 		};
 		const concept = Object.assign(data, extraData);

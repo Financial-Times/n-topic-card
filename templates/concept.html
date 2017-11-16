@@ -1,22 +1,21 @@
 {{#concept @this}}
 <section data-trackable="concept" aria-label="{{name}}" {{#if responsiveGrids}}data-o-grid-colspan="{{responsiveGrids}}"{{/if}} class="card__myft {{#unless items.length}}card--empty{{/unless}}{{#if lazyLoadImages}} card--lazy-loading-images{{/if}} {{classes}}">
 		<header class="card__myft-header">
-			{{#if items.length}}
-				<div class="card__myft-image-container{{#if lazyLoadImages}} n-ui-hide-core{{/if}}">
-					{{#nImagePresenter srcSet=imageUrl sizes='{"default": 90, "XL": 120 }' classes="card__myft-image" widths='[90, 120]' lazyLoad=lazyLoadImages}}
-						{{> n-image/templates/image }}
-					{{/nImagePresenter}}
-				</div>
-			{{/if}}
 			<p class="card__myft-title">
 				<a class="card__concept-link" href="{{url}}" data-trackable="concept-link" aria-label="Go to list of all articles about {{#if prefLabel}}{{prefLabel}}{{else}}{{name}}{{/if}}">
 					{{#if prefLabel}}{{prefLabel}}{{else}}{{name}}{{/if}}
 				</a>
 			</p>
+
+			{{#ifAll flags flags.myFtApiWrite}}
+			<div class="card__myft-meta">
+				<div class="card__myft-btn card__myft-btn--following">{{> n-myft-ui/myft/templates/follow conceptId=id name=name variant='inverse' extraClasses="card__concept-follow" }}</div>
+				<div class="card__myft-btn card__myft-btn--alerts">{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name buttonText='Off' variant='inverse' extraClasses="card__concept-instant" }}</div>
+			</div>
+		{{/ifAll}}
 		</header>
 		{{#if items.length}}
 			<dl class="card__myft-content">
-				<dt class="card__concept-sub-heading">Recent articles</dt>
 				<dd class="card__concept-articles-container">
 					<ul class="card__concept-articles">
 						{{#items}}
@@ -35,6 +34,11 @@
 										<span class="card__classifier">Premium</span>
 									{{/ifAll}}
 								</a>
+
+								<p class="card__concept-article-date">
+									<time data-o-component="o-date" class="o-date" datetime="{{publishedDate}}"></time>
+								</p>
+
 							</li>
 						{{/items}}
 					</ul>
@@ -43,20 +47,8 @@
 		{{else}}
 			<div class="card__myft-content">
 				<p class="card__concept-empty">No articles published in the last two weeks</p>
-				<p class="card__concept-empty">To see previous articles visit the <a class="card__concept-empty-link" data-trackable="empty-link" href={{url}}>{{name}}</a> topic page</p>
+				<p class="card__concept-empty"><a class="card__concept-empty-link" data-trackable="empty-link" href={{url}}>See more on this topic</a></p>
 			</div>
 		{{/if}}
-		{{#ifAll flags flags.myFtApiWrite}}
-			<div class="card__myft-meta">
-				<div class="o-grid-row o-grid-row--compact">
-					<div data-o-grid-colspan="6">
-						{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name extraClasses="card__concept-instant" }}
-					</div>
-					<div data-o-grid-colspan="6">
-						{{> n-myft-ui/myft/templates/follow conceptId=id name=name extraClasses="card__concept-follow" }}
-					</div>
-				</div>
-			</div>
-		{{/ifAll}}
 	</section>
 {{/concept}}

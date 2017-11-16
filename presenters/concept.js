@@ -1,6 +1,5 @@
 'use strict';
 
-const ConceptImagePresenter = require('./concept-image');
 const ResponsiveGridsPresenter = require('./responsive-grids');
 
 /**
@@ -12,14 +11,7 @@ class ConceptPresenter {
 	constructor (data) {
 		this.data = data;
 	}
-	get imageUrl () {
-		if (this.data) {
-			const image = new ConceptImagePresenter({
-				items: this.data.items
-			});
-			return image.imageUrl;
-		}
-	}
+
 	get responsiveGrids () {
 		if (this.data && this.data.show) {
 			const rgrids = new ResponsiveGridsPresenter({show: this.data.show});
