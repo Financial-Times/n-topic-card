@@ -19,7 +19,7 @@
 				<dd class="card__concept-articles-container">
 					<ul class="card__concept-articles">
 						{{#items}}
-							<li class="card__concept-article">
+							<li class="card__concept-article {{#ifEquals hasBeenRead true}}card__concept-article--read{{/ifEquals}}">
 								<a
 									class="card__concept-article-link"
 									href="{{url}}{{#unless ../isFollowing}}?tagToFollow={{../conceptId}}{{/unless}}{{../referrerTracking}}"

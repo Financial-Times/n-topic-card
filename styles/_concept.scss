@@ -37,13 +37,16 @@
 		border-bottom-width: 0;
 	}
 }
-
 .card__concept-article-link {
 	border-bottom-width: 0;
 	color: oColorsGetPaletteColor('black');
 
 	&:visited {
 		color: getColor('black-80');
+	}
+
+	.card__concept-article--read & {
+		color: oColorsGetPaletteColor('black-50');
 	}
 }
 
