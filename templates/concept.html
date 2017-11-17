@@ -10,7 +10,7 @@
 			{{#ifAll flags flags.myFtApiWrite}}
 			<div class="card__myft-meta">
 				<div class="card__myft-btn card__myft-btn--following">{{> n-myft-ui/myft/templates/follow conceptId=id name=name variant='inverse' extraClasses="card__concept-follow" }}</div>
-				<div class="card__myft-btn card__myft-btn--alerts">{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name buttonText='Off' variant='inverse' extraClasses="card__concept-instant" }}</div>
+				<div class="card__myft-btn card__myft-btn--alerts">{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name variant='inverse' mini=true extraClasses="card__concept-instant" }}</div>
 			</div>
 		{{/ifAll}}
 		</header>
