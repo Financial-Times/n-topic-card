@@ -3,7 +3,7 @@
 * builds a value for data-o-grid-colspan that will show or hide a card depending
 * @param {Object} show using o-grid breakpoints, sets up a grid colspan value to display the section (or not)
 * e.g. show: { default: true, M: false, XL: true }
-* NB if you are thinking about setting something other than 12 on n-concept section, you should wrap n-concept in something instead
+* NB if you are thinking about setting something other than 12 on n-topic-card section, you should wrap n-topic-card in something instead
 **/
 class ResponsiveGridsPresenter {
 	constructor (data) {

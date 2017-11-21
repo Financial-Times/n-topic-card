@@ -1,18 +1,18 @@
 {
-  "name": "@financial-times/n-concept",
+  "name": "@financial-times/n-topic-card",
   "version": "0.0.0",
-  "description": "n-concept provides a card for concepts (e.g. topic, author) and their articles",
+  "description": "n-topic-card provides cards for concepts (e.g. topic, author) and their articles",
   "main": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Financial-Times/n-concept.git"
+    "url": "git+https://github.com/Financial-Times/n-topic-card.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Financial-Times/n-concept/issues"
+    "url": "https://github.com/Financial-Times/n-topic-card/issues"
   },
-  "homepage": "https://github.com/Financial-Times/n-concept#readme",
+  "homepage": "https://github.com/Financial-Times/n-topic-card#readme",
   "devDependencies": {
     "@financial-times/n-gage": "^1.8.5",
     "@financial-times/n-internal-tool": "^1.2.3",
@@ -24,9 +24,6 @@
     "node-sass": "^4.5.3",
     "npm-prepublish": "^1.2.2",
     "pa11y-ci": "^0.4.0"
-  },
-  "dependencies": {
-    "@financial-times/n-image": "^5.0.0"
   },
   "scripts": {
     "precommit": "node_modules/.bin/secret-squirrel",

@@ -1,7 +1,7 @@
 {
-  "name": "n-concept",
-  "homepage": "https://github.com/financial-times/n-concept",
-  "description": "n-concept provides a card for concepts (e.g. topic, author) and their articles",
+  "name": "n-topic-card",
+  "homepage": "https://github.com/financial-times/n-topic-card",
+  "description": "n-topic-card provides a card for topics (e.g. topic, author) and their articles",
   "ignore": [
     "**/.*",
     "node_modules",

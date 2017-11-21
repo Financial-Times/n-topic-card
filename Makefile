@@ -10,9 +10,9 @@ unit-test:
 	mocha --recursive --reporter spec tests
 
 demo-build:
-	@rm -rf bower_components/n-concept
-	@mkdir bower_components/n-concept
-	@cp -r templates/ bower_components/n-concept/templates/
+	@rm -rf bower_components/n-topic-card
+	@mkdir bower_components/n-topic-card
+	@cp -r templates/ bower_components/n-topic-card/templates/
 	@node-sass demos/src/main.scss public/main.css --include-path bower_components
 	@$(DONE)
 

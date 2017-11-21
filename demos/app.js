@@ -8,7 +8,7 @@ const highlight = chalk.bold.green;
 
 const app = module.exports = express({
 	name: 'public',
-	systemCode: 'n-concept-demo',
+	systemCode: 'n-topic-card-demo',
 	withFlags: false,
 	withHandlebars: true,
 	withNavigation: false,
