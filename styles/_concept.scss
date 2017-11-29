@@ -1,4 +1,4 @@
-.card__concept-link {
+.topic-card__concept-link {
 	color: getColor('white');
 	border-bottom: 0;
 	word-wrap: break-word;
@@ -8,24 +8,24 @@
 	}
 }
 
-.card__concept-sub-heading {
+.topic-card__concept-sub-heading {
 	@include oTypographySans(1);
 	margin: 10px 0 0;
 }
 
-.card__concept-articles-container {
+.topic-card__concept-articles-container {
 	margin: 0;
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
-.card__concept-articles {
+.topic-card__concept-articles {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.card__concept-article {
+.topic-card__concept-article {
 	@include oTypographyDisplay($scale: 2);
 	@include oTypographyPadding($top: 1, $bottom: 2);
 	margin: 8px 0 0;
@@ -37,7 +37,7 @@
 		border-bottom-width: 0;
 	}
 }
-.card__concept-article-link {
+.topic-card__concept-article-link {
 	border-bottom-width: 0;
 	color: oColorsGetPaletteColor('black');
 
@@ -45,34 +45,34 @@
 		color: getColor('black-80');
 	}
 
-	.card__concept-article--read & {
+	.topic-card__concept-article--read & {
 		color: oColorsGetPaletteColor('black-50');
 	}
 }
 
-.card__concept-article-text {
+.topic-card__concept-article-text {
 	display: inline;
 	font-size: inherit; // nullify H3's override
 	font-weight: inherit; // nullify H3's override
 
-	.card__concept-article-link:hover &,
-	.card__concept-article-link:focus & {
+	.topic-card__concept-article-link:hover &,
+	.topic-card__concept-article-link:focus & {
 		border-bottom: 1px dotted;
 	}
 }
 
-.card__concept-article-date {
+.topic-card__concept-article-date {
 	@include oTypographySans($scale: -2);
 	@include oTypographyMargin($top: 2, $bottom: 0);
 	color: getColor('black-60');
 	text-transform: uppercase;
 }
 
-.card__concept-follow {
+.topic-card__concept-follow {
 	float: right;
 }
 
-.card__concept-empty {
+.topic-card__concept-empty {
 	@include oTypographySans($scale: 1);
 	@include oTypographyMargin($top: 3);
 	padding-left: 45px;
