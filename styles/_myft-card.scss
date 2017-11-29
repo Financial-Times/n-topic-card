@@ -1,4 +1,4 @@
-.card__myft {
+.topic-card__myft {
 	display: flex;
 	flex: 1 1 auto;
 	flex-direction: column;
@@ -17,20 +17,20 @@
 	}
 }
 
-.card__myft-header {
+.topic-card__myft-header {
 	display: flex;
 	background: getColor('claret');
 	padding: 0 10px;
 }
 
-.card__myft-title {
+.topic-card__myft-title {
 	@include oTypographySansBold($scale: 2, $progressive: true);
 	color: getColor('white');
 	flex: 1 1 auto;
 	padding-right: 10px;
 }
 
-.card__myft-meta {
+.topic-card__myft-meta {
 	@include oTypographyMargin($top: 4);
 	flex: 1 0 auto;
 	display: flex;
@@ -38,11 +38,11 @@
 	justify-content: flex-end;
 }
 
-.card__myft-btn--following {
+.topic-card__myft-btn--following {
 	margin-right: 10px;
 }
 
-.card__myft-content {
+.topic-card__myft-content {
 	border-top: 1px solid rgba(getColorFor('myft'), 0.3);
 	flex-grow: 1;
 	margin: 0;

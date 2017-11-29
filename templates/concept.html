@@ -1,41 +1,41 @@
 {{#concept @this}}
-<section data-trackable="concept" aria-label="{{name}}" {{#if responsiveGrids}}data-o-grid-colspan="{{responsiveGrids}}"{{/if}} class="card__myft {{#unless items.length}}card--empty{{/unless}}{{#if lazyLoadImages}} card--lazy-loading-images{{/if}} {{classes}}">
-		<header class="card__myft-header">
-			<p class="card__myft-title">
-				<a class="card__concept-link" href="{{url}}" data-trackable="concept-link" aria-label="Go to list of all articles about {{#if prefLabel}}{{prefLabel}}{{else}}{{name}}{{/if}}">
+<section data-trackable="concept" aria-label="{{name}}" {{#if responsiveGrids}}data-o-grid-colspan="{{responsiveGrids}}"{{/if}} class="topic-card__myft {{#unless items.length}}topic-card--empty{{/unless}}{{#if lazyLoadImages}} topic-card--lazy-loading-images{{/if}} {{classes}}">
+		<header class="topic-card__myft-header">
+			<p class="topic-card__myft-title">
+				<a class="topic-card__concept-link" href="{{url}}" data-trackable="concept-link" aria-label="Go to list of all articles about {{#if prefLabel}}{{prefLabel}}{{else}}{{name}}{{/if}}">
 					{{#if prefLabel}}{{prefLabel}}{{else}}{{name}}{{/if}}
 				</a>
 			</p>
 
 			{{#ifAll flags flags.myFtApiWrite}}
-			<div class="card__myft-meta">
-				<div class="card__myft-btn card__myft-btn--following">{{> n-myft-ui/myft/templates/follow conceptId=id name=name variant='inverse' extraClasses="card__concept-follow" }}</div>
-				<div class="card__myft-btn card__myft-btn--alerts">{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name variant='inverse' mini=true extraClasses="card__concept-instant" }}</div>
+			<div class="topic-card__myft-meta">
+				<div class="topic-card__myft-btn topic-card__myft-btn--following">{{> n-myft-ui/myft/templates/follow conceptId=id name=name variant='inverse' extraClasses="topic-card__concept-follow" }}</div>
+				<div class="topic-card__myft-btn topic-card__myft-btn--alerts">{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name variant='inverse' mini=true extraClasses="topic-card__concept-instant" }}</div>
 			</div>
-		{{/ifAll}}
+			{{/ifAll}}
 		</header>
 		{{#if items.length}}
-			<dl class="card__myft-content">
-				<dd class="card__concept-articles-container">
-					<ul class="card__concept-articles">
+			<dl class="topic-card__myft-content">
+				<dd class="topic-card__concept-articles-container">
+					<ul class="topic-card__concept-articles">
 						{{#items}}
-							<li class="card__concept-article {{#ifEquals hasBeenRead true}}card__concept-article--read{{/ifEquals}}">
+							<li class="topic-card__concept-article {{#ifEquals hasBeenRead true}}topic-card__concept-article--read{{/ifEquals}}">
 								<a
-									class="card__concept-article-link"
+									class="topic-card__concept-article-link"
 									href="{{url}}{{#unless ../isFollowing}}?tagToFollow={{../conceptId}}{{/unless}}{{../referrerTracking}}"
 									data-trackable="article"
 								>
-									<span class="card__classifier-gap">
-										<span class="card__concept-article-text">
+									<span class="topic-card__classifier-gap">
+										<span class="topic-card__concept-article-text">
 											{{title}}
 										</span>
 									</span>
 									{{#ifAll @root.flags.premiumContentIndicator isPremium}}
-										<span class="card__classifier">Premium</span>
+										<span class="topic-card__classifier">Premium</span>
 									{{/ifAll}}
 								</a>
 
-								<p class="card__concept-article-date">
+								<p class="topic-card__concept-article-date">
 									<time data-o-component="o-date" class="o-date" datetime="{{publishedDate}}"></time>
 								</p>
 
@@ -45,9 +45,9 @@
 				</dd>
 			</dl>
 		{{else}}
-			<div class="card__myft-content">
-				<p class="card__concept-empty">No articles published in the last two weeks</p>
-				<p class="card__concept-empty"><a class="card__concept-empty-link" data-trackable="empty-link" href={{url}}>See more on this topic</a></p>
+			<div class="topic-card__myft-content">
+				<p class="topic-card__concept-empty">No articles published in the last two weeks</p>
+				<p class="topic-card__concept-empty"><a class="topic-card__concept-empty-link" data-trackable="empty-link" href={{url}}>See more on this topic</a></p>
 			</div>
 		{{/if}}
 	</section>
