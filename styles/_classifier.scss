@@ -1,9 +1,9 @@
-.card__classifier-gap:after {
+.topic-card__classifier-gap:after {
 	content: ' ';
 	margin-right: 0.11em;
 }
 
-.card__classifier {
+.topic-card__classifier {
 	@include oTypographySansBold($scale: -1, $progressive: true);
 
 	vertical-align: 5%;
@@ -12,12 +12,12 @@
 	color: getColor('white');
 	display: inline;
 
-	.card__classifier-gap ~ & { // overrides oTypographySansBold's setting
+	.topic-card__classifier-gap ~ & { // overrides oTypographySansBold's setting
 		line-height: 15px;
 		font-size: 15px;
 
-		.card__related-item &,
-		.card__concept-article & {
+		.topic-card__related-item &,
+		.topic-card__concept-article & {
 			line-height: 12px;
 			font-size: 12px;
 		}
