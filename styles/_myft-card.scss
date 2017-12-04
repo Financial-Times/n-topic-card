@@ -57,7 +57,23 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	display: flex;
-	align-content: center;
+	align-items: center;
 	justify-content: flex-end;
 	border-top: 1px solid getColor('black-20');
+}
+
+.topic-card__excess {
+	@include oTypographySansBold($scale: -1, $progressive: true);
+	margin: 0;
+	padding: 0;
+	flex-grow: 1;
+}
+
+.topic-card__excess-link {
+	color: getColor('black');
+	border-bottom: 0;
+
+	&:hover {
+		color: getColor('black-80');
+	}
 }
