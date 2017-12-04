@@ -19,15 +19,23 @@
 
 .topic-card__myft-header {
 	display: flex;
-	background: getColor('claret');
 	padding: 0 10px;
 }
 
 .topic-card__myft-title {
 	@include oTypographySansBold($scale: 2, $progressive: true);
-	color: getColor('white');
+	color: getColor('black');
 	flex: 1 1 auto;
 	padding-right: 10px;
+
+	&:after {
+		content: '';
+		display: block;
+		width: 85px;
+		height: 5px;
+		@include oTypographyMargin($top: 2);
+		background: oColorsGetPaletteColor('black');
+	}
 }
 
 .topic-card__myft-meta {
@@ -38,12 +46,18 @@
 	justify-content: flex-end;
 }
 
-.topic-card__myft-btn--following {
-	margin-right: 10px;
-}
-
 .topic-card__myft-content {
-	border-top: 1px solid rgba(getColorFor('myft'), 0.3);
 	flex-grow: 1;
 	margin: 0;
+}
+
+.topic-card__myft-footer {
+	@include oTypographyMargin($top: 1);
+	@include oTypographyPadding($top: 3, $bottom: 1);
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+	align-content: center;
+	justify-content: flex-end;
+	border-top: 1px solid getColor('black-20');
 }
