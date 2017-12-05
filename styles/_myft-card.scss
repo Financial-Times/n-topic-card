@@ -34,7 +34,7 @@
 		width: 85px;
 		height: 5px;
 		@include oTypographyMargin($top: 2);
-		background: oColorsGetPaletteColor('black');
+		background: getColor('black');
 	}
 }
 
