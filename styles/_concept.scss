@@ -1,10 +1,10 @@
 .topic-card__concept-link {
-	color: getColor('white');
+	color: getColor('black');
 	border-bottom: 0;
 	word-wrap: break-word;
 
 	&:hover {
-		color: getColor('white-80');
+		color: getColor('black-80');
 	}
 }
 
@@ -26,7 +26,7 @@
 }
 
 .topic-card__concept-article {
-	@include oTypographyDisplay($scale: 2);
+	@include oTypographySans($scale: 2);
 	@include oTypographyPadding($top: 1, $bottom: 2);
 	margin: 8px 0 0;
 	padding-left: 0;

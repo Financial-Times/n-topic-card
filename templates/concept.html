@@ -9,8 +9,7 @@
 
 			{{#ifAll flags flags.myFtApiWrite}}
 			<div class="topic-card__myft-meta">
-				<div class="topic-card__myft-btn topic-card__myft-btn--following">{{> n-myft-ui/myft/templates/follow conceptId=id name=name variant='inverse' extraClasses="topic-card__concept-follow" }}</div>
-				<div class="topic-card__myft-btn topic-card__myft-btn--alerts">{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name variant='inverse' mini=true extraClasses="topic-card__concept-instant" }}</div>
+				<div class="topic-card__myft-btn topic-card__myft-btn--following">{{> n-myft-ui/myft/templates/follow conceptId=id name=name extraClasses="topic-card__concept-follow" }}</div>
 			</div>
 			{{/ifAll}}
 		</header>
@@ -50,5 +49,16 @@
 				<p class="topic-card__concept-empty"><a class="topic-card__concept-empty-link" data-trackable="empty-link" href={{url}}>See more on this topic</a></p>
 			</div>
 		{{/if}}
+
+		<footer class="topic-card__myft-footer">
+			{{#if excessItems.length }}
+			<p class="topic-card__excess">
+				<a class="topic-card__excess-link" href="{{url}}" data-trackable="excess-stories-link" aria-label="Go to list of all articles about {{#if prefLabel}}{{prefLabel}}{{else}}{{name}}{{/if}}">
+					{{ excessItems.length }} more stor{{#ifEquals excessItems.length 1 }}y{{else}}ies{{/ifEquals}}
+				</a>
+			</p>
+			{{/if}}
+			<div class="topic-card__myft-btn topic-card__myft-btn--alerts">{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name extraClasses="topic-card__concept-instant" }}</div>
+		</footer>
 	</section>
 {{/concept}}
