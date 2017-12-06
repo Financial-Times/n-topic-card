@@ -7,15 +7,10 @@
 	position: relative;
 	width: 100%;
 	box-sizing: border-box;
-	margin-top: oGridGutter();
 	padding-bottom: oGridGutter();
 	overflow: visible;
 	background: getColor('white-40');
 	border: 1px solid getColor('black-5');
-
-	@include oGridRespondTo(M) {
-		margin-top: oGridGutter(M);
-	}
 }
 
 .topic-card__myft-header {
