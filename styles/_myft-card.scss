@@ -1,8 +1,7 @@
 .topic-card__myft {
 	display: flex;
 	flex: 1 1 auto;
-	flex-direction: column;
-	flex-wrap: nowrap;
+	flex-flow: column nowrap;
 	justify-content: flex-start;
 	position: relative;
 	width: 100%;
@@ -24,12 +23,12 @@
 	flex: 1 1 auto;
 	padding-right: 10px;
 
-	&:after {
+	&::after {
+		@include oTypographyMargin($top: 2);
 		content: '';
 		display: block;
 		width: 85px;
 		height: 5px;
-		@include oTypographyMargin($top: 2);
 		background: getColor('black');
 	}
 }
