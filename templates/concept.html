@@ -45,7 +45,13 @@
 			</dl>
 		{{else}}
 			<div class="topic-card__myft-content">
-				<p class="topic-card__concept-empty">No articles published in the last week</p>
+				<p class="topic-card__concept-empty">
+					{{#if nTopicCardEmptyMessage}}
+						{{nTopicCardEmptyMessage}}
+					{{else}}
+						No new articles on this topic
+					{{/if}}
+				</p>
 				<p class="topic-card__concept-empty"><a class="topic-card__concept-empty-link" data-trackable="empty-link" href={{url}}>See more on this topic</a></p>
 			</div>
 		{{/if}}
