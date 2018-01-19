@@ -60,7 +60,7 @@
 			{{/if}}
 			<div class="topic-card__myft-btn topic-card__myft-btn--alerts">{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name extraClasses="topic-card__concept-instant" }}</div>
 			{{#if showPrioritiseButton}}
-				<button class="topic-card__pin-link" data-concept-id="{{id}}">Pin</button>
+				<button class="topic-card__pin-link" data-concept-id="{{id}}" data-prioritised="{{#if prioritised}}true{{else}}false{{/if}}">{{#if prioritised}}Pin{{else}}Unpin{{/if}}</button>
 			{{/if}}
 		</footer>
 	</section>
