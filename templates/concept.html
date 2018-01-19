@@ -67,7 +67,7 @@
 					{{else}}
 						<input type="hidden" value="http://www.ft.com/ontology/concept/Concept" name="directType">
 					{{/if}}
-					<button>{{#if prioritised}}Unpin{{else}}Pin{{/if}}</button>
+					<button class="topic-card__pin-link" data-concept-id={{id}} data-prioritised="{{#if prioritised}}true{{else}}false{{/if}}">{{#if prioritised}}Unpin{{else}}Pin{{/if}}</button>
 				</form>
 			{{/if}}
 		</footer>
