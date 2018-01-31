@@ -18,7 +18,7 @@
 }
 
 .topic-card__myft-title {
-	@include oTypographySansBold($scale: 2, $progressive: true);
+	@include oTypographySansBold($scale: 1, $progressive: true);
 	color: getColor('black');
 	flex: 1 1 auto;
 	padding-right: 10px;
