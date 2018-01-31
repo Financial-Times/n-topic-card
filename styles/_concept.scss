@@ -26,7 +26,7 @@
 }
 
 .topic-card__concept-article {
-	@include oTypographySans($scale: 2);
+	@include oTypographySans($scale: 1);
 	@include oTypographyPadding($top: 0, $bottom: 3);
 	margin: 8px 0 0;
 	padding-left: 0;
