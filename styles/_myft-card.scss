@@ -6,7 +6,9 @@
 	position: relative;
 	width: 100%;
 	box-sizing: border-box;
-	padding-bottom: oGridGutter();
+	@include oTypographyPadding($top: 3, $bottom: 3);
+	padding-left: 12px;
+	padding-right: 12px;
 	overflow: visible;
 	background: getColor('white-40');
 	border: 1px solid getColor('black-5');
@@ -14,14 +16,13 @@
 
 .topic-card__myft-header {
 	display: flex;
-	padding: 0 20px;
 }
 
 .topic-card__myft-title {
 	@include oTypographySansBold($scale: 1, $progressive: true);
 	color: getColor('black');
 	flex: 1 1 auto;
-	padding-right: 10px;
+	margin-top: 0;
 
 	&::after {
 		@include oTypographyMargin($top: 2);
@@ -34,7 +35,6 @@
 }
 
 .topic-card__myft-meta {
-	@include oTypographyMargin($top: 4);
 	flex: 1 0 auto;
 	display: flex;
 	align-items: flex-start;
@@ -49,8 +49,6 @@
 .topic-card__myft-footer {
 	@include oTypographyMargin($top: 1);
 	@include oTypographyPadding($top: 2, $bottom: 0);
-	padding-left: 20px;
-	padding-right: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
