@@ -73,7 +73,15 @@
 					{{else}}
 						<input type="hidden" value="http://www.ft.com/ontology/concept/Concept" name="directType">
 					{{/if}}
-					<button class="topic-card__pin-link" data-concept-id={{id}} data-prioritised="{{#if prioritised}}true{{else}}false{{/if}}">{{#if prioritised}}Unpin{{else}}Pin{{/if}}</button>
+					<button
+						class="o-buttons {{#if prioritised}}o-buttons--primary{{/if}} o-buttons-icon o-buttons-icon--icon-only myft-ui__button--pin"
+						data-prioritise-button
+						data-concept-id="{{id}}"
+						data-prioritised="{{#if prioritised}}true{{else}}false{{/if}}"
+						{{#if prioritised}}aria-pressed="true"{{/if}}
+						>
+							<span class="o-buttons-icon__label">{{#if prioritised}}Unpin{{else}}Pin{{/if}}</span>
+					</button>
 				</form>
 			{{/if}}
 		</footer>
