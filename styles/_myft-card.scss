@@ -12,6 +12,9 @@
 	overflow: visible;
 	background: getColor('white-40');
 	border: 1px solid getColor('black-5');
+	&[data-prioritised=true] {
+		background: getColor('white');
+	}
 }
 
 .topic-card__myft-header {
