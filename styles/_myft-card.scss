@@ -73,3 +73,10 @@
 		color: getColor('black-80');
 	}
 }
+
+.topic-card__myft-footer__divider {
+	height: 18px;
+	width: 1px;
+	background: getColor('black-30');
+	margin: 0 1px;
+}
