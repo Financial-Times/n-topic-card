@@ -12,7 +12,7 @@
 	overflow: visible;
 	background: getColor('white-40');
 	border: 1px solid getColor('black-5');
-	&[data-prioritised=true] {
+	&[data-prioritised] {
 		background: getColor('white');
 	}
 }
