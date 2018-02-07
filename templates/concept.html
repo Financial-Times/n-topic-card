@@ -66,7 +66,7 @@
 			{{/if}}
 			<div class="topic-card__myft-btn topic-card__myft-btn--alerts">{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name extraClasses="topic-card__concept-instant" }}</div>
 			{{#if showPrioritiseButton}}
-				<span class="topic-card__myft-footer__divider"></span>
+				<span class="myft-pin-divider"></span>
 				<form method="post" action="/__myft/api/core/prioritised/concept/{{id}}?method={{#if prioritised}}delete{{else}}put{{/if}}">
 					<input type="hidden" value="{{name}}" name="name">
 					{{#if directType}}
@@ -75,7 +75,7 @@
 						<input type="hidden" value="http://www.ft.com/ontology/concept/Concept" name="directType">
 					{{/if}}
 					<button
-						class="myft-ui__pin-button"
+						class="myft-pin-button"
 						data-prioritise-button
 						data-concept-id="{{id}}"
 						data-prioritised="{{#if prioritised}}true{{else}}false{{/if}}"
