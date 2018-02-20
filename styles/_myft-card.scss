@@ -73,3 +73,11 @@
 		color: getColor('black-80');
 	}
 }
+
+.topic-card--empty {
+	background: getColor('black-5');
+	border-color: getColor('black-10');
+	.n-myft-ui--instant .n-myft-ui__button {
+		color: getColor('teal-40');
+	}
+}
