@@ -6,7 +6,7 @@
 	position: relative;
 	width: 100%;
 	box-sizing: border-box;
-	@include oTypographyPadding($top: 3, $bottom: 2);
+	@include oTypographyPadding($top: 2, $bottom: 2);
 	padding-left: 12px;
 	padding-right: 12px;
 	overflow: visible;
