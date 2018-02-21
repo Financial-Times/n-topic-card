@@ -31,7 +31,12 @@
 									</span>
 
 									<span class="topic-card__concept-article-date">
-										<time data-o-component="o-date" class="o-date" datetime="{{publishedDate}}"></time>
+										<time
+											data-o-component="o-date"
+											class="o-date"
+											data-o-date-format="time-ago-abbreviated-limit-4-hours"
+											datetime="{{publishedDate}}">
+										</time>
 									</span>
 
 									{{#ifAll @root.flags.premiumContentIndicator isPremium}}
