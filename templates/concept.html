@@ -29,14 +29,15 @@
 											{{title}}
 										</span>
 									</span>
+
+									<span class="topic-card__concept-article-date">
+										<time data-o-component="o-date" class="o-date" datetime="{{publishedDate}}"></time>
+									</span>
+
 									{{#ifAll @root.flags.premiumContentIndicator isPremium}}
 										<span class="topic-card__classifier">Premium</span>
 									{{/ifAll}}
 								</a>
-
-								<p class="topic-card__concept-article-date">
-									<time data-o-component="o-date" class="o-date" datetime="{{publishedDate}}"></time>
-								</p>
 
 							</li>
 						{{/items}}
@@ -52,7 +53,11 @@
 						No new articles on this topic
 					{{/if}}
 				</p>
-				<p class="topic-card__concept-empty"><a class="topic-card__concept-empty-link" data-trackable="empty-link" href={{url}}>See more on this topic</a></p>
+				<p class="topic-card__concept-empty">
+					<a class="topic-card__concept-empty-link" data-trackable="empty-link" href={{url}}>
+						See more on this topic
+					</a>
+				</p>
 			</div>
 		{{/if}}
 
