@@ -1,5 +1,13 @@
 {{#concept @this}}
-<section data-trackable="concept" aria-label="{{name}}" {{#if responsiveGrids}}data-o-grid-colspan="{{responsiveGrids}}"{{/if}} class="topic-card__myft {{#unless items.length}}topic-card--empty{{/unless}}{{#if lazyLoadImages}} topic-card--lazy-loading-images{{/if}} {{classes}}" {{#if prioritised}}data-prioritised{{/if}}>
+<section data-trackable="concept"
+	aria-label="{{name}}"
+	{{#if responsiveGrids}}data-o-grid-colspan="{{responsiveGrids}}"{{/if}}
+	class="
+		topic-card__myft
+		{{#unless items.length}}topic-card--empty {{#if flags.myftGroupEmptyTopics}}myft-grouped-topic{{/if}}{{/unless}}
+		{{#if lazyLoadImages}} topic-card--lazy-loading-images{{/if}}
+		{{classes}}"
+	{{#if prioritised}}data-prioritised{{/if}}>
 		<header class="topic-card__myft-header">
 			<p class="topic-card__myft-title">
 				<a class="topic-card__concept-link" href="{{url}}" data-trackable="concept-link" aria-label="Go to list of all articles about {{#if prefLabel}}{{prefLabel}}{{else}}{{name}}{{/if}}">
@@ -51,18 +59,20 @@
 			</dl>
 		{{else}}
 			<div class="topic-card__myft-content">
-				<p class="topic-card__concept-empty">
-					{{#if nTopicCardEmptyMessage}}
-						{{nTopicCardEmptyMessage}}
-					{{else}}
-						No new articles on this topic
-					{{/if}}
-				</p>
-				<p class="topic-card__concept-empty">
-					<a class="topic-card__concept-empty-link" data-trackable="empty-link" href={{url}}>
-						See more on this topic
-					</a>
-				</p>
+				{{#unless flags.myftGroupEmptyTopics}}
+					<p class="topic-card__concept-empty">
+						{{#if nTopicCardEmptyMessage}}
+							{{nTopicCardEmptyMessage}}
+						{{else}}
+							No new articles on this topic
+						{{/if}}
+					</p>
+					<p class="topic-card__concept-empty">
+						<a class="topic-card__concept-empty-link" data-trackable="empty-link" href={{url}}>
+							See more on this topic
+						</a>
+					</p>
+				{{/unless}}
 			</div>
 		{{/if}}
 
@@ -74,6 +84,9 @@
 				</a>
 			</p>
 			{{/if}}
+			{{#unless items.length }}
+			<p class="topic-card__excess">0 stories</p>
+			{{/unless}}
 			<div class="topic-card__myft-btn topic-card__myft-btn--alerts">{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name extraClasses="topic-card__concept-instant" }}</div>
 			{{> n-myft-ui/myft/templates/pin-button}}
 		</footer>
