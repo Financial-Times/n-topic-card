@@ -1,5 +1,13 @@
 {{#concept @this}}
-<section data-trackable="concept" aria-label="{{name}}" {{#if responsiveGrids}}data-o-grid-colspan="{{responsiveGrids}}"{{/if}} class="topic-card__myft {{#unless items.length}}topic-card--empty{{/unless}}{{#if lazyLoadImages}} topic-card--lazy-loading-images{{/if}} {{classes}}" {{#if prioritised}}data-prioritised{{/if}}>
+<section data-trackable="concept"
+	aria-label="{{name}}"
+	{{#if responsiveGrids}}data-o-grid-colspan="{{responsiveGrids}}"{{/if}}
+	class="
+		topic-card__myft
+		{{#unless items.length}}topic-card--empty {{#if flags.myftGroupEmptyTopics}}myft-grouped-topic{{/if}}{{/unless}}
+		{{#if lazyLoadImages}} topic-card--lazy-loading-images{{/if}}
+		{{classes}}"
+	{{#if prioritised}}data-prioritised{{/if}}>
 		<header class="topic-card__myft-header">
 			<p class="topic-card__myft-title">
 				<a class="topic-card__concept-link" href="{{url}}" data-trackable="concept-link" aria-label="Go to list of all articles about {{#if prefLabel}}{{prefLabel}}{{else}}{{name}}{{/if}}">
