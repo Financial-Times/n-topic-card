@@ -6,7 +6,7 @@
 	position: relative;
 	width: 100%;
 	box-sizing: border-box;
-	@include oTypographyPadding($top: 3, $bottom: 2);
+	@include oTypographyPadding($top: 2, $bottom: 2);
 	padding-left: 12px;
 	padding-right: 12px;
 	overflow: visible;
@@ -19,22 +19,15 @@
 
 .topic-card__myft-header {
 	display: flex;
+	align-items: center;
 }
 
 .topic-card__myft-title {
 	@include oTypographySansBold($scale: 1, $progressive: true);
 	color: getColor('black');
 	flex: 1 1 auto;
-	margin-top: 0;
-
-	&::after {
-		@include oTypographyMargin($top: 2);
-		content: '';
-		display: block;
-		width: 85px;
-		height: 5px;
-		background: getColor('black');
-	}
+	margin: 0;
+	padding-right: 6px;
 }
 
 .topic-card__myft-meta {

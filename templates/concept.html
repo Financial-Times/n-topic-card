@@ -37,14 +37,20 @@
 											{{title}}
 										</span>
 									</span>
+
+									<span class="topic-card__concept-article-date">
+										<time
+											data-o-component="o-date"
+											class="o-date"
+											data-o-date-format="time-ago-abbreviated-limit-4-hours"
+											datetime="{{publishedDate}}">
+										</time>
+									</span>
+
 									{{#ifAll @root.flags.premiumContentIndicator isPremium}}
 										<span class="topic-card__classifier">Premium</span>
 									{{/ifAll}}
 								</a>
-
-								<p class="topic-card__concept-article-date">
-									<time data-o-component="o-date" class="o-date" datetime="{{publishedDate}}"></time>
-								</p>
 
 							</li>
 						{{/items}}
@@ -55,13 +61,17 @@
 			<div class="topic-card__myft-content">
 				{{#unless flags.myftGroupEmptyTopics}}
 					<p class="topic-card__concept-empty">
-							{{#if nTopicCardEmptyMessage}}
-								{{nTopicCardEmptyMessage}}
-							{{else}}
-								No new articles on this topic
-							{{/if}}
+						{{#if nTopicCardEmptyMessage}}
+							{{nTopicCardEmptyMessage}}
+						{{else}}
+							No new articles on this topic
+						{{/if}}
 					</p>
-					<p class="topic-card__concept-empty"><a class="topic-card__concept-empty-link" data-trackable="empty-link" href={{url}}>See more on this topic</a></p>
+					<p class="topic-card__concept-empty">
+						<a class="topic-card__concept-empty-link" data-trackable="empty-link" href={{url}}>
+							See more on this topic
+						</a>
+					</p>
 				{{/unless}}
 			</div>
 		{{/if}}
