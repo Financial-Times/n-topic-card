@@ -26,7 +26,7 @@
 				<dd class="topic-card__concept-articles-container">
 					<ul class="topic-card__concept-articles">
 						{{#items}}
-							<li class="topic-card__concept-article {{#ifEquals hasBeenRead true}}topic-card__concept-article--read{{/ifEquals}}">
+							<li class="topic-card__concept-article {{#ifEquals hasBeenRead true}}topic-card__concept-article--read{{/ifEquals}}{{#ifEquals type 'video'}} topic-card__concept-article--video{{/ifEquals}}">
 								<a
 									class="topic-card__concept-article-link"
 									href="{{url}}{{#unless ../isFollowing}}?tagToFollow={{../conceptId}}{{/unless}}{{../referrerTracking}}"
