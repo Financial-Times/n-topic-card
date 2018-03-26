@@ -22,41 +22,39 @@
 			{{/ifAll}}
 		</header>
 		{{#if items.length}}
-			<dl class="topic-card__myft-content">
-				<dd class="topic-card__concept-articles-container">
-					<ul class="topic-card__concept-articles">
-						{{#items}}
-							<li class="topic-card__concept-article {{#ifEquals hasBeenRead true}}topic-card__concept-article--read{{/ifEquals}}{{#ifEquals type 'video'}} topic-card__concept-article--video{{/ifEquals}}">
-								<a
-									class="topic-card__concept-article-link"
-									href="{{url}}{{#unless ../isFollowing}}?tagToFollow={{../conceptId}}{{/unless}}{{../referrerTracking}}"
-									data-trackable="article"
-								>
-									<span class="topic-card__classifier-gap">
-										<span class="topic-card__concept-article-text">
-											{{title}}
-										</span>
+			<div class="topic-card__myft-content">
+				<ul class="topic-card__concept-articles">
+					{{#items}}
+						<li class="topic-card__concept-article {{#ifEquals hasBeenRead true}}topic-card__concept-article--read{{/ifEquals}}{{#ifEquals type 'video'}} topic-card__concept-article--video{{/ifEquals}}">
+							<a
+								class="topic-card__concept-article-link"
+								href="{{url}}{{#unless ../isFollowing}}?tagToFollow={{../conceptId}}{{/unless}}{{../referrerTracking}}"
+								data-trackable="article"
+							>
+								<span class="topic-card__classifier-gap">
+									<span class="topic-card__concept-article-text">
+										{{title}}
 									</span>
+								</span>
 
-									<span class="topic-card__concept-article-date">
-										<time
-											data-o-component="o-date"
-											class="o-date"
-											data-o-date-format="time-ago-abbreviated"
-											datetime="{{publishedDate}}">
-										</time>
-									</span>
+								<span class="topic-card__concept-article-date">
+									<time
+										data-o-component="o-date"
+										class="o-date"
+										data-o-date-format="time-ago-abbreviated"
+										datetime="{{publishedDate}}">
+									</time>
+								</span>
 
-									{{#ifAll @root.flags.premiumContentIndicator isPremium}}
-										<span class="topic-card__classifier">Premium</span>
-									{{/ifAll}}
-								</a>
+								{{#ifAll @root.flags.premiumContentIndicator isPremium}}
+									<span class="topic-card__classifier">Premium</span>
+								{{/ifAll}}
+							</a>
 
-							</li>
-						{{/items}}
-					</ul>
-				</dd>
-			</dl>
+						</li>
+					{{/items}}
+				</ul>
+			</divdl>
 		{{else}}
 			<div class="topic-card__myft-content">
 				{{#unless flags.myftGroupEmptyTopics}}
