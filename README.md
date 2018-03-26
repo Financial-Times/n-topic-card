@@ -42,7 +42,7 @@ The decorator finds an image from the list of articles to be displayed, and if i
 
 ## Demo page
 
-`make demo`: Serves examples of the component locally (`https://local.ft.com:5005`), using dummy data and in isolation from an app.
+`make demo`: Serves examples of the component locally (`http://localhost:5005`), using dummy data and in isolation from an app.
 
 This is done on a simple express app which renders a single demo page that calls the partials to exhibit, populating them with data from a fixture.
 
