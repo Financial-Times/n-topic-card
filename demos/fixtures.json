@@ -1,8 +1,7 @@
 {
   "javascriptBundles": null,
   "flags": {
-    "myFtApiWrite": true,
-    "premiumContentIndicator": true
+    "myFtApiWrite": true
   },
   "concepts": [{
       "name": "Unfollowed concept with articles",
