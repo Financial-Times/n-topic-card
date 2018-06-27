@@ -85,7 +85,7 @@
 			{{#unless items.length }}
 			<p class="topic-card__excess">0 stories</p>
 			{{/unless}}
-			<div class="topic-card__myft-btn topic-card__myft-btn--alerts">{{> n-myft-ui/myft/templates/instant-alert conceptId=id name=name extraClasses="topic-card__concept-instant" }}</div>
+			<div class="topic-card__myft-btn topic-card__myft-btn--alerts">{{> n-myft-ui/components/instant-alert/instant-alert conceptId=id name=name extraClasses="topic-card__concept-instant" }}</div>
 			{{#if ../isFollowing}}
 				{{> n-myft-ui/components/pin-button/pin-button}}
 			{{/if}}
