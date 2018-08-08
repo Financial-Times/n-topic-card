@@ -1,9 +1,6 @@
 @import 'n-myft-ui/myft/main';
-@import 'n-myft-ui/myft-common/main';
 @import 'n-image/main';
 @import "o-icons/main";
 @import './styles/myft-card';
 @import './styles/concept';
 @import './styles/classifier';
-
-@include nUiMyftCommon();
