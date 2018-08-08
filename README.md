@@ -34,6 +34,12 @@ n-topic-card requires at least the following data:
 
 Please view the source for more information.
 
+Make sure that when used, myFT styles are included in the head stylesheet of the app. If not, necessary styles can be included by adding this code:
+```
+@import 'n-myft-ui/myft-common/main';
+@include nUiMyftCommon();
+```
+
 ## Extra data
 
 `responsive-grids` handles scenarios where you want particular cards to be hidden at certain breakpoints. For example, on the home page only 3 myFT concept cards are shown between the medium and large breakpoints.  This decorator requires the data item `show` with the settings in an object e.g. `{ default: true, M: false, XL: true }`.
