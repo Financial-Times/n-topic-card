@@ -6,6 +6,8 @@ const chalk = require('chalk');
 const errorHighlight = chalk.bold.red;
 const highlight = chalk.bold.green;
 
+const xHandlebars = require('@financial-times/x-handlebars');
+
 const app = module.exports = express({
 	name: 'public',
 	systemCode: 'n-topic-card-demo',
@@ -19,7 +21,10 @@ const app = module.exports = express({
 	viewsDirectory: '/demos',
 	layoutsDir: 'demos',
 	partialsDirectory: process.cwd(),
-	directory: process.cwd()
+	directory: process.cwd(),
+	helpers: {
+		x: xHandlebars()
+	}
 });
 
 app.get('/', (req, res) => {

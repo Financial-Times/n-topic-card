@@ -16,6 +16,9 @@
   "devDependencies": {
     "@financial-times/n-gage": "^1.8.5",
     "@financial-times/n-internal-tool": "^1.2.3",
+    "@financial-times/x-follow-button": "file:../x-dash/components/x-follow-button",
+    "@financial-times/x-handlebars": "^1.0.0-beta.1",
+    "hyperons": "^0.4.1",
     "bower": "^1.7.9",
     "chai": "^3.5.0",
     "eslint": "^3.8.1",
@@ -29,5 +32,10 @@
     "precommit": "node_modules/.bin/secret-squirrel",
     "prepush": "make test && make verify -j3",
     "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg"
+  },
+  "x-dash": {
+    "engine": {
+      "server": "hyperons"
+    }
   }
 }
