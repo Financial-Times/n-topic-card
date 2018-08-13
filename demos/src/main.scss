@@ -1,2 +1,13 @@
 @import 'n-ui-foundations/main';
+
+$o-buttons-is-silent: false;
+@import 'n-myft-ui/myft-common/main';
+@include nUiMyftCommon();
+
 @import '../../main';
+
+@import '../../node_modules/@financial-times/x-follow-button/dist/FollowButton';
+
+.demo-card {
+    margin: 10px;
+}
