@@ -18,11 +18,20 @@
 			{{#ifAll flags flags.myFtApiWrite}}
 			<div class="topic-card__myft-meta">
 				<div class="topic-card__myft-btn topic-card__myft-btn--following">
-					{{{
-						x local="../x-dash/components/x-follow-button"
-						component="FollowButton"
-						isSelected=setFollowButtonStateToSelected
-					}}}
+					{{#if @root.flags.xFollowButton}}
+						{{{
+							x local="../x-dash/components/x-follow-button"
+							component="FollowButton"
+							isSelected=setFollowButtonStateToSelected
+							conceptId=id
+						}}}
+					{{else}}
+						{{>
+							n-myft-ui/myft/templates/follow
+							conceptId=id
+							name=name
+						}}
+					{{/if}}
 				</div>
 			</div>
 			{{/ifAll}}
