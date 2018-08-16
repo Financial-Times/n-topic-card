@@ -37,7 +37,6 @@ Please view the source for more information.
 Make sure that when used, myFT styles are included in the head stylesheet of the app. If not, necessary styles can be included by adding this code:
 ```
 @import 'n-myft-ui/myft-common/main';
-@include nUiMyftCommon();
 ```
 
 ## Extra data
