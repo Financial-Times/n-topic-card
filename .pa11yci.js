@@ -9,7 +9,6 @@ const urls = ['http://localhost:5005/'];
 
 const config = {
 	defaults: {
-		page: {},
 		timeout: 50000,
 		hideElements: 'iframe[src*=google],iframe[src*=proxy]',
 		rules: ['Principle1.Guideline1_3.1_3_1_AAA']
@@ -19,8 +18,10 @@ const config = {
 
 for (let viewport of viewports) {
 	for (let url of urls) {
-		url.viewport = viewport;
-		config.urls.push(url);
+		config.urls.push({
+			url,
+			viewport
+		});
 	}
 }
 

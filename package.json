@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/Financial-Times/n-topic-card#readme",
   "devDependencies": {
-    "@financial-times/n-gage": "^1.8.5",
+    "@financial-times/n-gage": "^2.0.4",
     "@financial-times/n-internal-tool": "^1.2.3",
     "bower": "^1.7.9",
     "chai": "^3.5.0",
@@ -23,7 +23,7 @@
     "mocha": "^3.1.2",
     "node-sass": "^4.5.3",
     "npm-prepublish": "^1.2.2",
-    "pa11y-ci": "^0.4.0"
+    "pa11y-ci": "^2.1.1"
   },
   "scripts": {
     "precommit": "node_modules/.bin/secret-squirrel",
