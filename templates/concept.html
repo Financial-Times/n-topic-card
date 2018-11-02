@@ -28,7 +28,7 @@
 						<li class="topic-card__concept-article {{#ifEquals hasBeenRead true}}topic-card__concept-article--read{{/ifEquals}}{{#ifEquals type 'video'}} topic-card__concept-article--video{{/ifEquals}}">
 							<a
 								class="topic-card__concept-article-link"
-								href="{{url}}{{../referrerTracking}}"
+								href="{{url}}{{#if ../conceptId}}?kbc={{../conceptId}}{{/if}}{{../referrerTracking}}"
 								data-trackable="article"
 							>
 								<span class="topic-card__classifier-gap">
