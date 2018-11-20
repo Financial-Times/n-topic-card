@@ -1,3 +1,7 @@
 @import 'n-ui-foundations/main';
 @import '../../main';
 @import 'n-myft-ui/components/follow-button/main';
+
+.topic-card__myft {
+    margin: 10px;
+} // cretes margins around cards, just so that demo looks a bit better
