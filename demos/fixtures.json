@@ -49,6 +49,7 @@
     {
       "name": "Concept with premium content",
       "url": "/",
+      "isFollowing": true,
       "items": [{
           "title": "Example article 1",
           "url": "/",
