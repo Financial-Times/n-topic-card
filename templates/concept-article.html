@@ -1,0 +1,27 @@
+<li class="topic-card__concept-article {{#ifEquals hasBeenRead true}}topic-card__concept-article--read{{/ifEquals}}{{#ifEquals type 'video'}} topic-card__concept-article--video{{/ifEquals}}">
+	<a
+		class="topic-card__concept-article-link"
+		href="{{url}}{{#if ../conceptId}}?kbc={{../conceptId}}{{/if}}{{../referrerTracking}}"
+		data-trackable="article"
+	>
+		<span class="topic-card__classifier-gap">
+			<span class="topic-card__concept-article-text">
+				{{title}}
+			</span>
+		</span>
+
+		<span class="topic-card__concept-article-date">
+			<time
+				data-o-component="o-date"
+				class="o-date"
+				data-o-date-format="time-ago-abbreviated"
+				datetime="{{publishedDate}}">
+			</time>
+		</span>
+
+		{{#if isPremium}}
+			<span class="topic-card__classifier">Premium</span>
+		{{/if}}
+	</a>
+
+</li>
