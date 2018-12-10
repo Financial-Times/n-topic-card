@@ -1,4 +1,4 @@
-# n-topic-card
+# n-topic-card [![CircleCI](https://circleci.com/gh/Financial-Times/n-topic-card.svg?style=svg)](https://circleci.com/gh/Financial-Times/n-topic-card)
 
 `n-topic-card` is a card that shows a list of articles for a concept (topic, author, etc.) with links to myFT actions.
 
