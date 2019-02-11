@@ -51,7 +51,7 @@
 	color: oColorsGetPaletteColor('black');
 
 	&:visited {
-		color: getColor('black-80');
+		color: oColorsGetPaletteColor('black-50');
 	}
 
 	.topic-card__concept-article--read & {
