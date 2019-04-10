@@ -1,0 +1,10 @@
+@mixin conceptArticleIcon($icon) {
+	@include oIconsGetIcon($icon, oColorsGetPaletteColor('white'), 15, $apply-width-height: false);
+	content: '';
+	width: 0.7em;
+	height: 0.7em;
+	min-width: 12px;
+	min-height: 12px;
+	margin-right: 0.15em;
+	background-color: oColorsGetPaletteColor('slate');
+}

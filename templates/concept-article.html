@@ -1,4 +1,4 @@
-<li class="topic-card__concept-article {{#ifEquals hasBeenRead true}}topic-card__concept-article--read{{/ifEquals}}{{#ifEquals type 'video'}} topic-card__concept-article--video{{/ifEquals}}">
+<li class="topic-card__concept-article {{#ifEquals hasBeenRead true}}topic-card__concept-article--read{{/ifEquals}}{{#ifEquals type 'video'}} topic-card__concept-article--video{{/ifEquals}}{{#ifEquals type 'audio'}} topic-card__concept-article--audio{{/ifEquals}}">
 	<a
 		class="topic-card__concept-article-link"
 		href="{{url}}{{#if ../conceptId}}?kbc={{../conceptId}}{{/if}}{{../referrerTracking}}"
