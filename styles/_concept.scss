@@ -35,14 +35,13 @@
 
 .topic-card__concept-article--video {
 	.topic-card__concept-article-link:before {
-		@include oIconsGetIcon('play', oColorsGetPaletteColor('white'), 15, $apply-width-height: false);
-		content: '';
-		width: 0.7em;
-		height: 0.7em;
-		min-width: 12px;
-		min-height: 12px;
-		margin-right: 0.15em;
-		background-color: oColorsGetPaletteColor('slate');
+		@include conceptArticleIcon('play');
+	}
+}
+
+.topic-card__concept-article--audio {
+	.topic-card__concept-article-link:before {
+		@include conceptArticleIcon('audio');
 	}
 }
 
