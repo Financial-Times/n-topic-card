@@ -3,10 +3,13 @@
   "flags": {
     "myFtApiWrite": true
   },
-  "concepts": [{
+  "concepts": [
+    {
+      "id": "1",
       "name": "Unfollowed concept with articles",
-      "url": "/",
-      "items": [{
+      "url": "/1",
+      "items": [
+        {
           "title": "Example article 1",
           "url": "/"
         },
@@ -25,10 +28,12 @@
       ]
     },
     {
+      "id": "2",
       "name": "Followed concept with articles",
-      "url": "/",
+      "url": "/2",
       "isFollowing": true,
-      "items": [{
+      "items": [
+        {
           "title": "Example article 1",
           "url": "/"
         },
@@ -47,10 +52,12 @@
       ]
     },
     {
+      "id": "3",
       "name": "Concept with premium content",
-      "url": "/",
+      "url": "/3",
       "isFollowing": true,
-      "items": [{
+      "items": [
+        {
           "title": "Example article 1",
           "url": "/",
           "isPremium": true
@@ -77,8 +84,9 @@
       ]
     },
     {
+      "id": "4",
       "name": "Concept with no articles",
-      "url": "/"
+      "url": "/4"
     }
   ]
 }
