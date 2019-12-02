@@ -6,14 +6,12 @@
 	position: relative;
 	width: 100%;
 	box-sizing: border-box;
-	@include oTypographyPadding($top: 2, $bottom: 2);
-	padding-left: 12px;
-	padding-right: 12px;
+	padding: oSpacingByName('s2') oSpacingByName('s3');
 	overflow: visible;
-	background: getColor('white-40');
-	border: 1px solid getColor('black-5');
+	background: oColorsByName('white-40');
+	border: 1px solid oColorsByName('black-5');
 	&[data-prioritised] {
-		background: getColor('white');
+		background: oColorsByName('white');
 	}
 }
 
@@ -23,8 +21,8 @@
 }
 
 .topic-card__myft-title {
-	@include oTypographySansBold($scale: 1, $progressive: true);
-	color: getColor('black');
+	@include oTypographySans($scale: 1, $weight: 'semibold');
+	color: oColorsByName('black');
 	flex: 1 1 auto;
 	margin: 0;
 	padding-right: 6px;
@@ -43,31 +41,32 @@
 }
 
 .topic-card__myft-footer {
-	@include oTypographyMargin($top: 1);
-	@include oTypographyPadding($top: 2, $bottom: 0);
+	margin-top: oSpacingByName('s1');
+	padding-top: oSpacingByName('s2');
+	padding-bottom: 0;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	border-top: 1px solid getColor('black-10');
+	border-top: 1px solid oColorsByName('black-10');
 }
 
 .topic-card__excess {
-	@include oTypographySansBold($scale: -1, $progressive: true);
+	@include oTypographySans($scale: -1, $weight: 'semibold');
 	margin: 0;
 	padding: 0;
 	flex-grow: 1;
 }
 
 .topic-card__excess-link {
-	color: getColor('black');
+	color: oColorsByName('black');
 	border-bottom: 0;
 
 	&:hover {
-		color: getColor('black-80');
+		color: oColorsByName('black-80');
 	}
 }
 
 .myft-grouped-topic {
-	background: getColor('black-5');
-	border-color: getColor('black-10');
+	background: oColorsByName('black-5');
+	border-color: oColorsByName('black-10');
 }

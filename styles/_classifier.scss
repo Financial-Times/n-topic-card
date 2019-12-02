@@ -4,15 +4,15 @@
 }
 
 .topic-card__classifier {
-	@include oTypographySansBold($scale: -1, $progressive: true);
+	@include oTypographySans($scale: -1, $weight: 'semibold');
 
 	vertical-align: 5%;
 	padding: 0.1em 0.4em 0.14em;
-	background-color: getColor('black-80');
-	color: getColor('white');
+	background-color: oColorsByName('black-80');
+	color: oColorsByName('white');
 	display: inline;
 
-	.topic-card__classifier-gap ~ & { // overrides oTypographySansBold's setting
+	.topic-card__classifier-gap ~ & { // overrides oTypographySans weight setting
 		line-height: 15px;
 		font-size: 15px;
 
