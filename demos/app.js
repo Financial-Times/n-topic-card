@@ -1,10 +1,14 @@
 'use strict';
 
+const conceptHelper = require('../handlebars-helpers/concept');
 const express = require('@financial-times/n-internal-tool');
+const handlebars = require('handlebars');
 const fixtures = require('./fixtures.json');
 const chalk = require('chalk');
 const errorHighlight = chalk.bold.red;
 const highlight = chalk.bold.green;
+
+handlebars.registerHelper('concept', conceptHelper);
 
 const app = module.exports = express({
 	name: 'public',
