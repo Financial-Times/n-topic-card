@@ -1,6 +1,6 @@
 .topic-card__concept-link {
 	color: oColorsByName('black');
-	border-bottom: 0;
+	text-decoration: none;
 	word-wrap: break-word;
 
 	&:hover {
@@ -46,8 +46,8 @@
 }
 
 .topic-card__concept-article-link {
-	border-bottom-width: 0;
 	color: oColorsByName('black');
+	text-decoration: none;
 
 	&:visited {
 		color: oColorsByName('black-50');
