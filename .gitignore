@@ -4,3 +4,4 @@ public/
 .stylelintrc
 .editorconfig
 .eslintrc.js
+*.env*
