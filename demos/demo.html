@@ -2,7 +2,14 @@
 	<div class="o-grid-row">
 		{{#concepts}}
 			<div data-o-grid-colspan="12 M6 L4">
-				{{> n-topic-card/templates/concept flags=@root.flags showPrioritiseButton=true}}
+				{{# if withCustomSlot }}
+					{{#> n-topic-card/templates/concept flags=@root.flags showPrioritiseButton=true
+														withCustomSlot=true}}
+						<span class="custom-slot-content">Some custom slot content</span>
+					{{/ n-topic-card/templates/concept}}
+				{{else}}
+					{{> n-topic-card/templates/concept flags=@root.flags showPrioritiseButton=true}}
+				{{/if}}
 			</div>
 		{{/concepts}}
 	</div>

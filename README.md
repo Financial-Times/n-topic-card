@@ -12,13 +12,21 @@ Add the following line to your main sass file: `@import "n-topic-card/main";`.
 
 ## Usage
 
-Server-side
+### Server-side
 
 ```html
 {{> n-topic-card/templates/concept }}
 ```
 
-Client-side
+#### With custom slot
+
+```html
+{{#> n-topic-card/templates/concept withCustomSlot=true}}
+    <div>Some custom content you wish to inject at the bottom of the card before the footer</div>
+{{/ n-topic-card/templates/concept}}
+```
+
+### Client-side
 
 ```javascript
 const myftTemplate = require('../../../views/partials/myft.html');
