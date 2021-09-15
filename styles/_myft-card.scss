@@ -40,6 +40,10 @@
 	margin: 0;
 }
 
+.topic-card__custom-slot {
+	flex: 1 0 auto;
+}
+
 .topic-card__myft-footer {
 	margin-top: oSpacingByName('s1');
 	padding-top: oSpacingByName('s2');

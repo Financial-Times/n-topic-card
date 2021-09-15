@@ -48,7 +48,13 @@
 				{{/unless}}
 			</div>
 		{{/if}}
-
+		{{#if @partial-block}}
+		{{#if withCustomSlot}}
+				<div class="topic-card__custom-slot">
+						{{> @partial-block }}
+				</div>
+		{{/if}}
+		{{/if}}
 		<footer class="topic-card__myft-footer">
 			{{#if excessItems.length }}
 			<p class="topic-card__excess">

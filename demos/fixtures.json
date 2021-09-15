@@ -87,6 +87,30 @@
       "id": "4",
       "name": "Concept with no articles",
       "url": "/4"
+    },
+    {
+      "id": "5",
+      "name": "Unfollowed concept with articles",
+      "url": "/1",
+      "items": [
+        {
+          "title": "Example article 1",
+          "url": "/"
+        },
+        {
+          "title": "Example article 2",
+          "url": "/"
+        },
+        {
+          "title": "Example article 3",
+          "url": "/"
+        },
+        {
+          "title": "Example article 4",
+          "url": "/"
+        }
+      ],
+      "withCustomSlot": true
     }
   ]
 }
