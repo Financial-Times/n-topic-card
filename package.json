@@ -30,7 +30,7 @@
   },
   "scripts": {
     "prepare": "npx snyk protect || npx snyk protect -d || true",
-    "preinstall": "check-engine"
+    "preinstall": "npm_config_yes=true npx check-engine"
   },
   "engines": {
     "node": "14.x"
