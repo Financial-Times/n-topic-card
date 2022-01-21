@@ -19,6 +19,7 @@
     "@financial-times/n-gage": "^8.3.2",
     "bower": "^1.8.8",
     "chai": "^3.5.0",
+    "check-engine": "^1.10.1",
     "eslint": "^6.7.2",
     "lintspaces-cli": "^0.4.0",
     "mocha": "^3.1.2",
@@ -28,7 +29,11 @@
     "snyk": "^1.168.0"
   },
   "scripts": {
-    "prepare": "npx snyk protect || npx snyk protect -d || true"
+    "prepare": "npx snyk protect || npx snyk protect -d || true",
+    "preinstall": "check-engine"
+  },
+  "engines": {
+    "node": "14.x"
   },
   "husky": {
     "hooks": {
