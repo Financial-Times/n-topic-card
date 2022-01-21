@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>n-topic-card demos</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/public/main.css">
+	</head>
+	<body>
+		<div class="o-grid-container o-grid-container--snappy">
+			<div class="o-grid-row">
+				{{#concepts}}
+					<div data-o-grid-colspan="12 M6 L4">
+						{{> n-topic-card/templates/concept flags=@root.flags showPrioritiseButton=true}}
+					</div>
+				{{/concepts}}
+			</div>
+		</div>
+	</body>
+</html>

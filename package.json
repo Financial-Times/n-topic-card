@@ -14,8 +14,9 @@
   },
   "homepage": "https://github.com/Financial-Times/n-topic-card#readme",
   "devDependencies": {
+    "@financial-times/dotcom-server-handlebars": "^2.5.2",
+    "@financial-times/n-express": "^22.1.3",
     "@financial-times/n-gage": "^3.6.0",
-    "@financial-times/n-internal-tool": "^3.0.0",
     "bower": "^1.8.8",
     "chai": "^3.5.0",
     "eslint": "^6.7.2",
