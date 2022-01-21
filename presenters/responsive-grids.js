@@ -21,7 +21,7 @@ class ResponsiveGridsPresenter {
 			if (breakpoint === 'default') {
 				return this.showOrHide(breakpoint);
 			} else {
-					return `${breakpoint}${this.showOrHide(breakpoint)}`;
+				return `${breakpoint}${this.showOrHide(breakpoint)}`;
 			}
 
 		});

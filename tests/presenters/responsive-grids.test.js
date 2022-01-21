@@ -9,9 +9,9 @@ describe('Responsive Grids Presenter', () => {
 	});
 
 	it('sets things marked true to 12 and things marked false to 0', () => {
-			const inst = new ResponsiveGridsPresenter({
-				'show': {default: true, M: false, XL: true}
-			});
+		const inst = new ResponsiveGridsPresenter({
+			'show': {default: true, M: false, XL: true}
+		});
 		expect(inst.responsiveGrids).to.equal('12 M0 XL12');
 	});
 });
