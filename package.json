@@ -33,7 +33,12 @@
     "preinstall": "npm_config_yes=true npx check-engine"
   },
   "engines": {
-    "node": "14.x"
+    "node": "12.x",
+    "npm": "7.x"
+  },
+  "volta": {
+    "node": "12.22.9",
+    "npm": "7.24.2"
   },
   "husky": {
     "hooks": {
