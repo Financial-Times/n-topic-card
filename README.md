@@ -45,7 +45,7 @@ Please view the source for more information.
 Make sure that when used, n-myft-ui component styles are included in the head stylesheet of the app. If your app doesn't have n-myft-ui/components/follow-button style, please add this:
 
 ```
-@import '@financial-times/n-myft-ui/components/follow-button/main';';
+@import '@financial-times/n-myft-ui/components/follow-button/main';
 ```
 
 ## Extra data
