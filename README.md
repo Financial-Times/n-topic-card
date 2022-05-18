@@ -4,9 +4,9 @@
 
 ## Install
 
-Add the component to bower.json and package.json.
+Add the component to package.json.
 
-Run `npm install n-topic-card --save && bower install n-topic-card --save`.
+Run `npm install n-topic-card --save`.
 
 Add the following line to your main sass file: `@import "n-topic-card/main";`.
 
@@ -44,7 +44,7 @@ Please view the source for more information.
 
 Make sure that when used, myFT styles are included in the head stylesheet of the app. If not, necessary styles can be included by adding this code:
 ```
-@import 'n-myft-ui/myft-common/main';
+@import '@financial-times/n-myft-ui/myft-common/main';
 ```
 
 ## Extra data
