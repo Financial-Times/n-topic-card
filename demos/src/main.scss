@@ -2,7 +2,7 @@ $system-code: 'n-topic-card';
 
 @import 'n-ui-foundations/main';
 @import '../../main';
-@import 'n-myft-ui/components/follow-button/main';
+@import '@financial-times/n-myft-ui/components/follow-button/main';
 
 html {
 	background: oColorsByName('paper');

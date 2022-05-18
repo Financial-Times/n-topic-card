@@ -10,10 +10,10 @@ unit-test:
 	mocha --recursive --reporter spec tests
 
 demo-build:
-	@rm -rf bower_components/n-topic-card
-	@mkdir bower_components/n-topic-card
-	@cp -r templates/ bower_components/n-topic-card/templates/
-	@node-sass demos/src/main.scss public/main.css --include-path bower_components
+	@rm -rf node_modules/@financial-times/n-topic-card
+	@mkdir node_modules/@financial-times/n-topic-card
+	@cp -r templates/ node_modules/@financial-times/n-topic-card/templates/
+	@sass demos/src/main.scss public/main.css --load-path node_modules
 	@$(DONE)
 
 demo: demo-build

@@ -13,24 +13,29 @@
     "url": "https://github.com/Financial-Times/n-topic-card/issues"
   },
   "homepage": "https://github.com/Financial-Times/n-topic-card#readme",
+  "scripts": {
+    "prepare": "npx snyk protect || npx snyk protect -d || true",
+    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
+  },
+  "dependencies": {
+    "@financial-times/n-myft-ui": "^28.0.1"
+  },
   "devDependencies": {
     "@financial-times/dotcom-server-handlebars": "2.6.2",
     "@financial-times/n-express": "^22.1.3",
     "@financial-times/n-gage": "^8.3.2",
-    "bower": "^1.8.8",
     "chai": "^3.5.0",
     "check-engine": "^1.10.1",
     "eslint": "^6.7.2",
     "lintspaces-cli": "^0.4.0",
     "mocha": "^3.1.2",
-    "node-sass": "^6.0.1",
     "npm-prepublish": "^1.2.2",
     "pa11y-ci": "^2.1.1",
+    "sass": "^1.51.0",
     "snyk": "^1.168.0"
   },
-  "scripts": {
-    "prepare": "npx snyk protect || npx snyk protect -d || true",
-    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
+  "peerDependencies": {
+    "n-ui-foundations": "^9.0.0"
   },
   "engines": {
     "node": "14.x || 16.x",
