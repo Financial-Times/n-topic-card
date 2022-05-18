@@ -42,6 +42,12 @@ n-topic-card requires at least the following data:
 
 Please view the source for more information.
 
+Make sure that when used, n-myft-ui component styles are included in the head stylesheet of the app. If your app doesn't have n-myft-ui/components/follow-button style, please add this:
+
+```
+@import '@financial-times/n-myft-ui/components/follow-button/main';';
+```
+
 ## Extra data
 
 `responsive-grids` handles scenarios where you want particular cards to be hidden at certain breakpoints. For example, on the home page only 3 myFT concept cards are shown between the medium and large breakpoints.  This decorator requires the data item `show` with the settings in an object e.g. `{ default: true, M: false, XL: true }`.
