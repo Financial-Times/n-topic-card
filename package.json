@@ -18,7 +18,7 @@
     "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
   },
   "dependencies": {
-    "@financial-times/n-myft-ui": "^28.0.1"
+    "@financial-times/n-myft-ui": "^28.0.6"
   },
   "devDependencies": {
     "@financial-times/dotcom-server-handlebars": "2.6.2",
