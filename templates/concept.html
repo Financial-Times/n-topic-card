@@ -10,11 +10,11 @@
 		{{classes}}"
 	{{#if prioritised}}data-prioritised{{/if}}>
 		<header class="topic-card__myft-header">
-			<p class="topic-card__myft-title">
+			<h3 class="topic-card__myft-title">
 				<a class="topic-card__concept-link" href="{{url}}" data-trackable="concept-link" aria-label="Go to list of all articles about {{#if prefLabel}}{{prefLabel}}{{else}}{{name}}{{/if}}">
 					{{#if prefLabel}}{{prefLabel}}{{else}}{{name}}{{/if}}
 				</a>
-			</p>
+			</h3>
 
 			{{#ifAll flags flags.myFtApiWrite}}
 			<div class="topic-card__myft-meta">
