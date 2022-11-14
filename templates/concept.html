@@ -42,7 +42,12 @@
 					</p>
 					<p class="topic-card__concept-empty">
 						<a class="topic-card__concept-empty-link" data-trackable="empty-link" href={{url}}>
-							See more on this topic
+							See more on
+							{{#if nTopicCardEmptyTopic}}
+								the topic {{nTopicCardEmptyTopic}}
+							{{else}}
+								this topic
+							{{/if}}
 						</a>
 					</p>
 				{{/unless}}
