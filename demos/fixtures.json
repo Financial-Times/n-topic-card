@@ -90,6 +90,12 @@
     },
     {
       "id": "5",
+      "name": "Concept with no articles and a topic",
+      "url": "/4",
+      "nTopicCardEmptyTopic": "Topic"
+    },
+    {
+      "id": "6",
       "name": "Unfollowed concept with articles",
       "url": "/1",
       "items": [
