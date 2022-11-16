@@ -43,8 +43,8 @@
 					<p class="topic-card__concept-empty">
 						<a class="topic-card__concept-empty-link" data-trackable="empty-link" href={{url}}>
 							See more on
-							{{#if nTopicCardEmptyTopic}}
-								the topic {{nTopicCardEmptyTopic}}
+							{{#if nTopicCardEmptyTopic }}
+								the topic {{#if prefLabel}}{{prefLabel}}{{else}}{{name}}{{/if}}
 							{{else}}
 								this topic
 							{{/if}}

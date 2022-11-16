@@ -92,7 +92,7 @@
       "id": "5",
       "name": "Concept with no articles and a topic",
       "url": "/4",
-      "nTopicCardEmptyTopic": "Topic"
+      "nTopicCardEmptyTopic": true
     },
     {
       "id": "6",
