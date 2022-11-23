@@ -63,7 +63,7 @@
 		<footer class="topic-card__myft-footer">
 			{{#if excessItems.length }}
 			<p class="topic-card__excess">
-				<a class="topic-card__excess-link" href="{{url}}" data-trackable="excess-stories-link" aria-label="{{ excessItems.length }} more stor{{#ifEquals excessItems.length 1 }}y{{else}}ies{{/ifEquals}}">
+				<a class="topic-card__excess-link" href="{{url}}" data-trackable="excess-stories-link" aria-label="{{ excessItems.length }} more stor{{#ifEquals excessItems.length 1 }}y{{else}}ies{{/ifEquals}} on {{#if prefLabel}}{{prefLabel}}{{else}}{{name}}{{/if}}">
 					{{ excessItems.length }} more stor{{#ifEquals excessItems.length 1 }}y{{else}}ies{{/ifEquals}}
 				</a>
 			</p>
