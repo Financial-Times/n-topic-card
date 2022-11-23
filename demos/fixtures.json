@@ -116,6 +116,20 @@
           "url": "/"
         }
       ],
+      "excessItems": [
+        {
+          "title": "Example article 5",
+          "url": "/"
+        },
+        {
+          "title": "Example article 6",
+          "url": "/"
+        },
+        {
+          "title": "Example article 7",
+          "url": "/"
+        }
+      ],
       "withCustomSlot": true
     }
   ]
