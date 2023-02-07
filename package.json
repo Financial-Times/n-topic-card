@@ -32,8 +32,8 @@
     "snyk": "^1.168.0"
   },
   "peerDependencies": {
-    "n-ui-foundations": "^9.0.0",
-    "@financial-times/n-myft-ui": "^28.3.0 || 29.x"
+    "@financial-times/n-myft-ui": "^30.0.1",
+    "n-ui-foundations": "^9.0.0"
   },
   "engines": {
     "node": "14.x || 16.x",
