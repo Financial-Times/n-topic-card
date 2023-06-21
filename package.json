@@ -18,7 +18,7 @@
     "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
   },
   "devDependencies": {
-    "@financial-times/dotcom-server-handlebars": "2.6.2",
+    "@financial-times/dotcom-server-handlebars": "8.1.0",
     "@financial-times/n-express": "^22.1.3",
     "@financial-times/n-gage": "^8.3.2",
     "chai": "^3.5.0",
