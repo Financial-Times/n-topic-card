@@ -36,7 +36,7 @@
     "n-ui-foundations": "^9.0.0"
   },
   "engines": {
-    "node": "14.x || 16.x",
+    "node": "18.x",
     "npm": "7.x"
   },
   "volta": {
